@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.355" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-14T19:22:15" tests="0" file="cypress\e2e\autorizacion-y-movil.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="HU-17 · Autorización del panel administrativo" timestamp="2026-11-14T19:22:15" tests="1" time="2.889" failures="0">
+    <testcase name="HU-17 · Autorización del panel administrativo CP-051 Usuario normal no accede al panel" time="2.846" classname="CP-051 Usuario normal no accede al panel">
+    </testcase>
+  </testsuite>
+  <testsuite name="HU-19 · Uso en pantalla de móvil" timestamp="2026-11-14T19:22:18" tests="1" time="1.464" failures="0">
+    <testcase name="HU-19 · Uso en pantalla de móvil CP-056 Uso en pantalla de móvil" time="1.418" classname="CP-056 Uso en pantalla de móvil">
+    </testcase>
+  </testsuite>
+</testsuites>

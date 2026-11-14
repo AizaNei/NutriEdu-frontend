@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="25.647" tests="9" failures="1">
+  <testsuite name="Root Suite" timestamp="2026-11-14T19:22:48" tests="0" file="cypress\e2e\recetas.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="HU-07 · Filtrado de recetas seguras" timestamp="2026-11-14T19:22:48" tests="3" time="4.677" failures="0">
+    <testcase name="HU-07 · Filtrado de recetas seguras CP-022 Receta con ingrediente restringido se excluye" time="2.991" classname="CP-022 Receta con ingrediente restringido se excluye">
+    </testcase>
+    <testcase name="HU-07 · Filtrado de recetas seguras CP-023 Receta segura se muestra" time="0.831" classname="CP-023 Receta segura se muestra">
+    </testcase>
+    <testcase name="HU-07 · Filtrado de recetas seguras CP-025 Estado vacío cuando ninguna receta es compatible" time="0.731" classname="CP-025 Estado vacío cuando ninguna receta es compatible">
+    </testcase>
+  </testsuite>
+  <testsuite name="HU-09 · Detalle de receta" timestamp="2026-11-14T19:22:53" tests="3" time="2.495" failures="0">
+    <testcase name="HU-09 · Detalle de receta CP-030 Detalle de receta segura" time="1.156" classname="CP-030 Detalle de receta segura">
+    </testcase>
+    <testcase name="HU-09 · Detalle de receta CP-031 Advertencia de ingrediente no seguro" time="0.545" classname="CP-031 Advertencia de ingrediente no seguro">
+    </testcase>
+    <testcase name="HU-09 · Detalle de receta CP-032 Receta inexistente" time="0.704" classname="CP-032 Receta inexistente">
+    </testcase>
+  </testsuite>
+  <testsuite name="HU-10 · Búsqueda de recetas" timestamp="2026-11-14T19:22:56" tests="3" time="18.470" failures="1">
+    <testcase name="HU-10 · Búsqueda de recetas CP-033 Búsqueda con coincidencias" time="1.114" classname="CP-033 Búsqueda con coincidencias">
+    </testcase>
+    <testcase name="HU-10 · Búsqueda de recetas CP-034 Búsqueda no devuelve recetas restringidas" time="0.000" classname="CP-034 Búsqueda no devuelve recetas restringidas">
+      <failure message="Timed out retrying after 8000ms: `cy.find()` failed because it requires a DOM element or document.
+
+No elements in the current DOM matched your query:
+
+  &gt; cy.get(section[aria-labelledby=&quot;section-resultados&quot;])" type="CypressError"><![CDATA[CypressError: Timed out retrying after 8000ms: `cy.find()` failed because it requires a DOM element or document.
+
+No elements in the current DOM matched your query:
+
+  > cy.get(section[aria-labelledby="section-resultados"])
+    at isElement (http://localhost:5173/__cypress/runner/cypress_runner.js:164014:62)
+    at validateType (http://localhost:5173/__cypress/runner/cypress_runner.js:163855:14)
+    at Object.isType (http://localhost:5173/__cypress/runner/cypress_runner.js:163886:7)
+    at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:147361:24)
+    at Object.subjectFn (http://localhost:5173/__cypress/runner/cypress_runner.js:162800:16)
+    at $Cy.verifyUpcomingAssertions (http://localhost:5173/__cypress/runner/cypress_runner.js:162043:31)
+    at onRetry (http://localhost:5173/__cypress/runner/cypress_runner.js:162791:15)
+    at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1776:23)
+    at Promise.attempt.Promise.try (http://localhost:5173/__cypress/runner/cypress_runner.js:4284:29)
+    at whenStable (http://localhost:5173/__cypress/runner/cypress_runner.js:162673:70)
+    at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:162573:14)
+    at tryCatcher (http://localhost:5173/__cypress/runner/cypress_runner.js:1776:23)
+    at Promise._settlePromiseFromHandler (http://localhost:5173/__cypress/runner/cypress_runner.js:1488:31)
+    at Promise._settlePromise (http://localhost:5173/__cypress/runner/cypress_runner.js:1545:18)
+    at Promise._settlePromise0 (http://localhost:5173/__cypress/runner/cypress_runner.js:1590:10)
+    at Promise._settlePromises (http://localhost:5173/__cypress/runner/cypress_runner.js:1670:18)
+    at Promise._fulfill (http://localhost:5173/__cypress/runner/cypress_runner.js:1614:18)
+    at <unknown> (http://localhost:5173/__cypress/runner/cypress_runner.js:5419:46)
+From Your Spec Code:
+    at Context.eval (webpack://nutriedu-pruebas-cypress/./cypress/e2e/recetas.cy.js:96:53)]]></failure>
+    </testcase>
+    <testcase name="HU-10 · Búsqueda de recetas CP-061 Búsqueda sin coincidencias" time="1.171" classname="CP-061 Búsqueda sin coincidencias">
+    </testcase>
+  </testsuite>
+</testsuites>

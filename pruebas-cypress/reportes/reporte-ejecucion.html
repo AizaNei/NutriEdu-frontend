@@ -2,60 +2,60 @@
 <style>body{font-family:Segoe UI,Arial,sans-serif;margin:32px;color:#17211b}h1{margin:0}.s{display:flex;gap:16px;margin:20px 0}.c{padding:14px 20px;border-radius:10px;background:#f1f5f2}.c b{display:block;font-size:28px}
 table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid #e2e8e4;padding:8px;text-align:left;vertical-align:top}th{background:#0f2a1c;color:#fff}
 .e{color:#fff;border-radius:999px;padding:2px 10px;font-weight:600}.m{color:#5e6e64;font-size:12px;margin-top:4px}.err{color:#b91c1c;white-space:pre-wrap}code{font-size:12px}</style></head><body>
-<h1>Reporte de ejecución · NutriEdu</h1><p>Cypress · 14 de noviembre de 2026 a las 2:11 p. m. · 0 archivos de pruebas</p>
-<div class="s"><div class="c"><b>27</b>casos automatizados</div><div class="c" style="color:#15803d"><b>0</b>aprobadas</div><div class="c" style="color:#b91c1c"><b>0</b>fallidas</div><div class="c"><b>27</b>sin ejecutar</div></div>
+<h1>Reporte de ejecución · NutriEdu</h1><p>Cypress · 14 de noviembre de 2026 a las 2:23 p. m. · 7 archivos de pruebas</p>
+<div class="s"><div class="c"><b>27</b>casos automatizados</div><div class="c" style="color:#15803d"><b>24</b>aprobadas</div><div class="c" style="color:#b91c1c"><b>3</b>fallidas</div></div>
 <table><tr><th>ID</th><th>Caso y criterio</th><th>Tipo</th><th>Archivo</th><th>Resultado</th><th>Tiempo</th></tr><tr><td><b>CP-001</b></td><td>Registro con datos válidos<div class="m">HU-01: con datos válidos se crea la cuenta.</div></td><td>Positivo</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>3.43 s</td></tr>
 <tr><td><b>CP-002</b></td><td>Registro con correo duplicado<div class="m">HU-01: si el correo ya está registrado, se muestra un error y no se crea otra cuenta.</div></td><td>Negativo</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.59 s</td></tr>
 <tr><td><b>CP-003</b></td><td>Registro con campos vacíos<div class="m">HU-01: nombre, correo y contraseña son obligatorios.</div></td><td>Negativo</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.41 s</td></tr>
 <tr><td><b>CP-004</b></td><td>Registro con contraseña de 9 caracteres (valor límite inferior - 1)<div class="m">HU-01: política de contraseña, mínimo 10 caracteres (9 = límite - 1).</div></td><td>Valor límite</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.48 s</td></tr>
 <tr><td><b>CP-005</b></td><td>Registro con correo de formato inválido<div class="m">HU-01: el correo debe tener un formato válido.</div></td><td>Negativo</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.48 s</td></tr>
 <tr><td><b>CP-007</b></td><td>Login con credenciales correctas<div class="m">HU-02: con credenciales correctas se permite el acceso y se genera un token JWT.</div></td><td>Positivo</td><td><code>cypress/e2e/login.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.78 s</td></tr>
 <tr><td><b>CP-008</b></td><td>Login con contraseña incorrecta<div class="m">HU-02: con contraseña incorrecta se muestra un error sin indicar cuál campo falló.</div></td><td>Negativo</td><td><code>cypress/e2e/login.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#b91c1c">Fallida</span> <b>BUG-03</b><div class="m err">mensaje genérico: expected 'Contraseña incorrecta' to not include 'Contraseña incorrecta'</div></td><td>0.00 s</td></tr>
 <tr><td><b>CP-009</b></td><td>Login con campos vacíos<div class="m">HU-02: los campos obligatorios no pueden quedar vacíos.</div></td><td>Negativo</td><td><code>cypress/e2e/login.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.41 s</td></tr>
 <tr><td><b>CP-010</b></td><td>Acceso a ruta privada sin token<div class="m">HU-02: las rutas privadas rechazan accesos sin sesión.</div></td><td>Negativo</td><td><code>cypress/e2e/login.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.40 s</td></tr>
 <tr><td><b>CP-022</b></td><td>Receta con ingrediente restringido se excluye<div class="m">HU-07: toda receta con un ingrediente restringido se excluye del listado.</div></td><td>Positivo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>2.46 s</td></tr>
 <tr><td><b>CP-023</b></td><td>Receta segura se muestra<div class="m">HU-07: las recetas sin ingredientes restringidos se muestran.</div></td><td>Positivo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.78 s</td></tr>
 <tr><td><b>CP-025</b></td><td>Estado vacío cuando ninguna receta es compatible<div class="m">HU-07: si ninguna receta es compatible, se muestra un estado vacío con mensaje claro.</div></td><td>Negativo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.77 s</td></tr>
 <tr><td><b>CP-030</b></td><td>Detalle de receta segura<div class="m">HU-09: el detalle muestra nombre, descripción, calorías, tiempo, nivel de salud e ingredientes.</div></td><td>Positivo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.28 s</td></tr>
 <tr><td><b>CP-031</b></td><td>Advertencia de ingrediente no seguro<div class="m">HU-09: si hay ingredientes no seguros, se muestra una advertencia con sustitutos.</div></td><td>Positivo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.59 s</td></tr>
 <tr><td><b>CP-032</b></td><td>Receta inexistente<div class="m">HU-09: si el ID de receta no existe, se muestra un mensaje de error.</div></td><td>Negativo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.78 s</td></tr>
 <tr><td><b>CP-033</b></td><td>Búsqueda con coincidencias<div class="m">HU-10: la búsqueda devuelve coincidencias sin distinguir mayúsculas.</div></td><td>Positivo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.03 s</td></tr>
 <tr><td><b>CP-034</b></td><td>Búsqueda no devuelve recetas restringidas<div class="m">HU-10: la búsqueda devuelve solo recetas compatibles con el perfil.</div></td><td>Negativo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#b91c1c">Fallida</span> <b>BUG-01</b><div class="m err">Timed out retrying after 8000ms: expected '[ &lt;h3.mt-4.text-lg.font-bold.leading-6.text-[var(--color-text)]&gt;, 1 more... ]' to have text 'Sin coincidencias', but the text was 'Batido de banano y bebida de almendraAvena con fresas y chía'</div></td><td>0.00 s</td></tr>
 <tr><td><b>CP-045</b></td><td>Guardar plan semanal<div class="m">HU-15: al guardar, el plan queda almacenado y se recupera al volver.</div></td><td>Positivo</td><td><code>cypress/e2e/planificador.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>4.59 s</td></tr>
 <tr><td><b>CP-046</b></td><td>Confirmación al reemplazar el plan<div class="m">HU-15: al reemplazar un plan existente se pide confirmación.</div></td><td>Positivo</td><td><code>cypress/e2e/planificador.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#b91c1c">Fallida</span> <b>BUG-02</b><div class="m err">Timed out retrying after 8000ms: Expected to find element: `[role="dialog"]`, but never found it.</div></td><td>0.00 s</td></tr>
 <tr><td><b>CP-047</b></td><td>El planificador no ofrece recetas no seguras<div class="m">HU-15: solo se pueden asignar recetas compatibles con el perfil.</div></td><td>Negativo</td><td><code>cypress/e2e/planificador.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.60 s</td></tr>
 <tr><td><b>CP-049</b></td><td>Lista de compras con plan vacío<div class="m">HU-16: si el plan está vacío, se informa que no hay ingredientes.</div></td><td>Negativo</td><td><code>cypress/e2e/planificador.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>0.45 s</td></tr>
 <tr><td><b>CP-051</b></td><td>Usuario normal no accede al panel<div class="m">HU-17: solo el rol administrador accede al panel.</div></td><td>Negativo</td><td><code>cypress/e2e/autorizacion-y-movil.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>2.85 s</td></tr>
 <tr><td><b>CP-056</b></td><td>Uso en pantalla de móvil<div class="m">HU-19: la interfaz se adapta a pantallas de móvil.</div></td><td>Positivo</td><td><code>cypress/e2e/autorizacion-y-movil.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.42 s</td></tr>
 <tr><td><b>CP-058</b></td><td>Registro con contraseña de exactamente 10 caracteres (valor límite inferior)<div class="m">HU-01: política de contraseña, mínimo 10 caracteres (10 = límite).</div></td><td>Valor límite</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.45 s</td></tr>
 <tr><td><b>CP-059</b></td><td>Registro con contraseña de exactamente 72 caracteres (valor límite superior)<div class="m">HU-01: política de contraseña, máximo 72 caracteres (72 = límite).</div></td><td>Valor límite</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.73 s</td></tr>
 <tr><td><b>CP-060</b></td><td>Registro con contraseña de 73 caracteres (valor límite superior + 1)<div class="m">HU-01: política de contraseña, máximo 72 caracteres (73 = límite + 1, el campo no lo acepta).</div></td><td>Valor límite</td><td><code>cypress/e2e/registro.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.69 s</td></tr>
 <tr><td><b>CP-061</b></td><td>Búsqueda sin coincidencias<div class="m">HU-10: si no hay coincidencias, se muestra un estado vacío.</div></td><td>Negativo</td><td><code>cypress/e2e/recetas.cy.js</code></td>
-<td><span class="e" style="background:#6b7280">Sin ejecutar</span></td><td>—</td></tr></table>
+<td><span class="e" style="background:#15803d">Aprobada</span></td><td>1.21 s</td></tr></table>
 <p class="m">Capturas: cypress/screenshots · Videos: cypress/videos · Defectos: docs/reporte-de-defectos.md</p></body></html>

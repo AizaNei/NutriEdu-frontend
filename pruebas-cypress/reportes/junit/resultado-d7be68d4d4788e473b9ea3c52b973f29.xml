@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="15.450" tests="4" failures="1">
+  <testsuite name="Root Suite" timestamp="2026-11-14T19:22:09" tests="0" file="cypress\e2e\planificador.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="HU-15 · Planificador semanal" timestamp="2026-11-14T19:22:09" tests="3" time="14.952" failures="1">
+    <testcase name="HU-15 · Planificador semanal CP-045 Guardar plan semanal" time="4.586" classname="CP-045 Guardar plan semanal">
+    </testcase>
+    <testcase name="HU-15 · Planificador semanal CP-046 Confirmación al reemplazar el plan" time="0.000" classname="CP-046 Confirmación al reemplazar el plan">
+      <failure message="Timed out retrying after 8000ms: Expected to find element: `[role=&quot;dialog&quot;]`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 8000ms: Expected to find element: `[role="dialog"]`, but never found it.
+    at Context.eval (webpack://nutriedu-pruebas-cypress/./cypress/e2e/planificador.cy.js:42:39)]]></failure>
+    </testcase>
+    <testcase name="HU-15 · Planificador semanal CP-047 El planificador no ofrece recetas no seguras" time="0.603" classname="CP-047 El planificador no ofrece recetas no seguras">
+    </testcase>
+  </testsuite>
+  <testsuite name="HU-16 · Lista de compras" timestamp="2026-11-14T19:22:24" tests="1" time="0.493" failures="0">
+    <testcase name="HU-16 · Lista de compras CP-049 Lista de compras con plan vacío" time="0.454" classname="CP-049 Lista de compras con plan vacío">
+    </testcase>
+  </testsuite>
+</testsuites>

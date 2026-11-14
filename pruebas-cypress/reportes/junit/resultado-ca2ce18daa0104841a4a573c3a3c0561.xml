@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.066" tests="4" failures="1">
+  <testsuite name="Root Suite" timestamp="2026-11-14T19:22:22" tests="0" file="cypress\e2e\login.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="HU-02 · Inicio de sesión" timestamp="2026-11-14T19:22:22" tests="4" time="4.059" failures="1">
+    <testcase name="HU-02 · Inicio de sesión CP-007 Login con credenciales correctas" time="1.779" classname="CP-007 Login con credenciales correctas">
+    </testcase>
+    <testcase name="HU-02 · Inicio de sesión CP-008 Login con contraseña incorrecta" time="0.000" classname="CP-008 Login con contraseña incorrecta">
+      <failure message="mensaje genérico: expected &apos;Contraseña incorrecta&apos; to not include &apos;Contraseña incorrecta&apos;" type="AssertionError"><![CDATA[AssertionError: mensaje genérico: expected 'Contraseña incorrecta' to not include 'Contraseña incorrecta'
+    at eval (webpack://nutriedu-pruebas-cypress/./cypress/e2e/login.cy.js:33:88)
+at Array.forEach (<anonymous>)
+    at Context.eval (webpack://nutriedu-pruebas-cypress/./cypress/e2e/login.cy.js:33:32)
+    at getRet (http://localhost:5173/__cypress/runner/cypress_runner.js:122309:22)]]></failure>
+    </testcase>
+    <testcase name="HU-02 · Inicio de sesión CP-009 Login con campos vacíos" time="0.406" classname="CP-009 Login con campos vacíos">
+    </testcase>
+    <testcase name="HU-02 · Inicio de sesión CP-010 Acceso a ruta privada sin sesión" time="0.400" classname="CP-010 Acceso a ruta privada sin sesión">
+    </testcase>
+  </testsuite>
+</testsuites>
