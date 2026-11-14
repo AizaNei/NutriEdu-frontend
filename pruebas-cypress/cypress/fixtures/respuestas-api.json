@@ -1,0 +1,3545 @@
+{
+ "_nota": "Respuestas grabadas del backend real de NutriEdu (base de datos de demostración, 14/11/2026). Las usa cypress/support/servidor-simulado.js.",
+ "usuarios": {
+  "nuevo": {
+   "message": "Login exitoso",
+   "token": "token-nuevo",
+   "user": {
+    "id": 19,
+    "nombre": "Usuario Cypress",
+    "email": "nuevo@nutriedu.test",
+    "rol": "usuario"
+   }
+  },
+  "laura": {
+   "message": "Login exitoso",
+   "token": "token-laura",
+   "user": {
+    "id": 1,
+    "nombre": "Laura Gómez",
+    "email": "laura@nutriedu.test",
+    "rol": "usuario"
+   }
+  },
+  "admin": {
+   "message": "Login exitoso",
+   "token": "token-admin",
+   "user": {
+    "id": 2,
+    "nombre": "Admin NutriEdu",
+    "email": "admin@nutriedu.test",
+    "rol": "administrador"
+   }
+  }
+ },
+ "loginFallido": {
+  "status": 401,
+  "body": {
+   "message": "Contraseña incorrecta"
+  }
+ },
+ "rutas": {
+  "laura": {
+   "GET /users/restrictions/1": {
+    "status": 200,
+    "body": {
+     "hasRestrictions": true,
+     "restrictions": [
+      {
+       "restriccion_id": 1,
+       "nombre": "Gluten"
+      },
+      {
+       "restriccion_id": 2,
+       "nombre": "Lactosa"
+      }
+     ]
+    }
+   },
+   "GET /recipes/recommendations?limit=6&offset=0": {
+    "status": 200,
+    "body": {
+     "recipes": [
+      {
+       "id": 16,
+       "nombre": "Crema de zanahoria",
+       "descripcion": "Crema de zanahoria y papa con cebolla, sin lácteos.",
+       "calorias": 223,
+       "tiempo_preparacion": 30,
+       "nivel_salud": 5,
+       "protein_g": "4.30",
+       "carbs_g": "40.90",
+       "fat_g": "5.50",
+       "saturated_fat_g": "0.70",
+       "sugar_g": "12.30",
+       "fiber_g": "8.70",
+       "sodium_mg": "727.50",
+       "serving_size_g": "356.50",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "ingredients": [
+        {
+         "id": 14,
+         "nombre": "papa"
+        },
+        {
+         "id": 18,
+         "nombre": "zanahoria"
+        },
+        {
+         "id": 19,
+         "nombre": "cebolla"
+        },
+        {
+         "id": 29,
+         "nombre": "aceite de oliva"
+        },
+        {
+         "id": 36,
+         "nombre": "sal"
+        }
+       ],
+       "recommendation": {
+        "score": 100,
+        "status": "suitable",
+        "confidence": 1,
+        "reasons": [
+         "Compatible con tus restricciones alimentarias efectivas.",
+         "Se ajusta al tiempo que tienes disponible para cocinar.",
+         "Buena calidad general dentro del catálogo de recetas."
+        ],
+        "warnings": [],
+        "missingNutrients": [],
+        "strategy": {
+         "code": "balanced",
+         "label": "Equilibrio general"
+        }
+       }
+      },
+      {
+       "id": 15,
+       "nombre": "Ensalada de garbanzos y atún",
+       "descripcion": "Garbanzos, atún, tomate, cebolla y limón.",
+       "calorias": 427,
+       "tiempo_preparacion": 15,
+       "nivel_salud": 5,
+       "protein_g": "37.00",
+       "carbs_g": "48.40",
+       "fat_g": "10.20",
+       "saturated_fat_g": "1.40",
+       "sugar_g": "10.90",
+       "fiber_g": "13.30",
+       "sodium_mg": "441.30",
+       "serving_size_g": "361.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "ingredients": [
+        {
+         "id": 4,
+         "nombre": "atun"
+        },
+        {
+         "id": 17,
+         "nombre": "tomate"
+        },
+        {
+         "id": 19,
+         "nombre": "cebolla"
+        },
+        {
+         "id": 24,
+         "nombre": "limon"
+        },
+        {
+         "id": 29,
+         "nombre": "aceite de oliva"
+        },
+        {
+         "id": 33,
+         "nombre": "garbanzos"
+        },
+        {
+         "id": 36,
+         "nombre": "sal"
+        }
+       ],
+       "recommendation": {
+        "score": 100,
+        "status": "suitable",
+        "confidence": 1,
+        "reasons": [
+         "Compatible con tus restricciones alimentarias efectivas.",
+         "Se ajusta al tiempo que tienes disponible para cocinar.",
+         "Buena calidad general dentro del catálogo de recetas."
+        ],
+        "warnings": [],
+        "missingNutrients": [],
+        "strategy": {
+         "code": "balanced",
+         "label": "Equilibrio general"
+        }
+       }
+      },
+      {
+       "id": 6,
+       "nombre": "Lentejas guisadas",
+       "descripcion": "Lentejas con zanahoria, tomate y cebolla, acompañadas de arroz integral.",
+       "calorias": 446,
+       "tiempo_preparacion": 45,
+       "nivel_salud": 5,
+       "protein_g": "22.10",
+       "carbs_g": "76.50",
+       "fat_g": "7.10",
+       "saturated_fat_g": "1.20",
+       "sugar_g": "9.40",
+       "fiber_g": "20.20",
+       "sodium_mg": "628.60",
+       "serving_size_g": "456.50",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "ingredients": [
+        {
+         "id": 8,
+         "nombre": "arroz integral"
+        },
+        {
+         "id": 17,
+         "nombre": "tomate"
+        },
+        {
+         "id": 18,
+         "nombre": "zanahoria"
+        },
+        {
+         "id": 19,
+         "nombre": "cebolla"
+        },
+        {
+         "id": 29,
+         "nombre": "aceite de oliva"
+        },
+        {
+         "id": 32,
+         "nombre": "lentejas"
+        },
+        {
+         "id": 36,
+         "nombre": "sal"
+        }
+       ],
+       "recommendation": {
+        "score": 100,
+        "status": "suitable",
+        "confidence": 1,
+        "reasons": [
+         "Compatible con tus restricciones alimentarias efectivas.",
+         "Se ajusta al tiempo que tienes disponible para cocinar.",
+         "Buena calidad general dentro del catálogo de recetas."
+        ],
+        "warnings": [],
+        "missingNutrients": [],
+        "strategy": {
+         "code": "balanced",
+         "label": "Equilibrio general"
+        }
+       }
+      },
+      {
+       "id": 2,
+       "nombre": "Bowl de quinoa con garbanzos",
+       "descripcion": "Quinoa con garbanzos, tomate, espinaca y aguacate; alto en fibra y proteína vegetal.",
+       "calorias": 492,
+       "tiempo_preparacion": 25,
+       "nivel_salud": 5,
+       "protein_g": "18.40",
+       "carbs_g": "68.20",
+       "fat_g": "18.10",
+       "saturated_fat_g": "2.40",
+       "sugar_g": "8.70",
+       "fiber_g": "17.00",
+       "sodium_mg": "444.30",
+       "serving_size_g": "426.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "ingredients": [
+        {
+         "id": 9,
+         "nombre": "quinoa"
+        },
+        {
+         "id": 16,
+         "nombre": "espinaca"
+        },
+        {
+         "id": 17,
+         "nombre": "tomate"
+        },
+        {
+         "id": 21,
+         "nombre": "aguacate"
+        },
+        {
+         "id": 29,
+         "nombre": "aceite de oliva"
+        },
+        {
+         "id": 33,
+         "nombre": "garbanzos"
+        },
+        {
+         "id": 36,
+         "nombre": "sal"
+        }
+       ],
+       "recommendation": {
+        "score": 100,
+        "status": "suitable",
+        "confidence": 1,
+        "reasons": [
+         "Compatible con tus restricciones alimentarias efectivas.",
+         "Se ajusta al tiempo que tienes disponible para cocinar.",
+         "Buena calidad general dentro del catálogo de recetas."
+        ],
+        "warnings": [],
+        "missingNutrients": [],
+        "strategy": {
+         "code": "balanced",
+         "label": "Equilibrio general"
+        }
+       }
+      },
+      {
+       "id": 1,
+       "nombre": "Pollo con arroz integral y brócoli",
+       "descripcion": "Pechuga de pollo a la plancha con arroz integral, brócoli al vapor y un toque de limón.",
+       "calorias": 513,
+       "tiempo_preparacion": 35,
+       "nivel_salud": 5,
+       "protein_g": "53.50",
+       "carbs_g": "45.90",
+       "fat_g": "12.30",
+       "saturated_fat_g": "2.60",
+       "sugar_g": "2.20",
+       "fiber_g": "5.30",
+       "sodium_mg": "537.90",
+       "serving_size_g": "416.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "ingredients": [
+        {
+         "id": 1,
+         "nombre": "pechuga de pollo"
+        },
+        {
+         "id": 8,
+         "nombre": "arroz integral"
+        },
+        {
+         "id": 15,
+         "nombre": "brocoli"
+        },
+        {
+         "id": 24,
+         "nombre": "limon"
+        },
+        {
+         "id": 29,
+         "nombre": "aceite de oliva"
+        },
+        {
+         "id": 36,
+         "nombre": "sal"
+        }
+       ],
+       "recommendation": {
+        "score": 100,
+        "status": "suitable",
+        "confidence": 1,
+        "reasons": [
+         "Compatible con tus restricciones alimentarias efectivas.",
+         "Se ajusta al tiempo que tienes disponible para cocinar.",
+         "Buena calidad general dentro del catálogo de recetas."
+        ],
+        "warnings": [],
+        "missingNutrients": [],
+        "strategy": {
+         "code": "balanced",
+         "label": "Equilibrio general"
+        }
+       }
+      },
+      {
+       "id": 9,
+       "nombre": "Tacos de frijol y aguacate",
+       "descripcion": "Tortillas de maíz con frijoles negros, aguacate, lechuga y tomate.",
+       "calorias": 504,
+       "tiempo_preparacion": 20,
+       "nivel_salud": 4,
+       "protein_g": "20.60",
+       "carbs_g": "83.60",
+       "fat_g": "12.30",
+       "saturated_fat_g": "1.80",
+       "sugar_g": "3.20",
+       "fiber_g": "23.70",
+       "sodium_mg": "444.70",
+       "serving_size_g": "381.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "ingredients": [
+        {
+         "id": 13,
+         "nombre": "tortilla de maiz"
+        },
+        {
+         "id": 17,
+         "nombre": "tomate"
+        },
+        {
+         "id": 20,
+         "nombre": "lechuga"
+        },
+        {
+         "id": 21,
+         "nombre": "aguacate"
+        },
+        {
+         "id": 34,
+         "nombre": "frijoles negros"
+        },
+        {
+         "id": 36,
+         "nombre": "sal"
+        }
+       ],
+       "recommendation": {
+        "score": 100,
+        "status": "suitable",
+        "confidence": 1,
+        "reasons": [
+         "Compatible con tus restricciones alimentarias efectivas.",
+         "Se ajusta al tiempo que tienes disponible para cocinar.",
+         "Buena calidad general dentro del catálogo de recetas."
+        ],
+        "warnings": [],
+        "missingNutrients": [],
+        "strategy": {
+         "code": "balanced",
+         "label": "Equilibrio general"
+        }
+       }
+      }
+     ],
+     "pagination": {
+      "limit": 6,
+      "offset": 0,
+      "total": 10,
+      "nextOffset": 6,
+      "hasMore": true
+     },
+     "profileContext": {
+      "usedFactors": [
+       "restrictions",
+       "goals_and_priority",
+       "clinical_conditions",
+       "latest_progress_weight",
+       "meals_per_day",
+       "cooking_time"
+      ],
+      "missingFactors": [
+       "nutrition_targets",
+       "energy:birthDate"
+      ],
+      "notScoredFactors": [
+       "physical_condition",
+       "profile_notes",
+       "eating_out_frequency"
+      ],
+      "effectiveRestrictions": [
+       {
+        "id": 1,
+        "name": "Gluten",
+        "source": "user"
+       },
+       {
+        "id": 2,
+        "name": "Lactosa",
+        "source": "user"
+       }
+      ],
+      "goals": [
+       {
+        "code": "general_health",
+        "priority": 1
+       },
+       {
+        "code": "maintain_weight",
+        "priority": 2
+       }
+      ],
+      "conditions": [
+       {
+        "code": "lactose_intolerance",
+        "riskLevel": "medium",
+        "requiresProfessionalGuidance": false
+       },
+       {
+        "code": "celiac_disease",
+        "riskLevel": "high",
+        "requiresProfessionalGuidance": true
+       }
+      ],
+      "targetBasis": {
+       "period": "per_meal",
+       "mealsPerDay": 3,
+       "sources": {},
+       "energyEstimate": null
+      },
+      "progress": {
+       "latestMeasurementDate": "2026-10-20T05:00:00.000Z",
+       "weightKg": 62
+      },
+      "conflicts": [],
+      "clinicalReviewRequired": true,
+      "recommendationStrategy": {
+       "code": "balanced",
+       "label": "Equilibrio general"
+      }
+     }
+    }
+   },
+   "GET /recipes/search/1?safe_only=true&paginated=true&limit=6&offset=0": {
+    "status": 200,
+    "body": {
+     "recipes": [
+      {
+       "id": 16,
+       "nombre": "Crema de zanahoria",
+       "descripcion": "Crema de zanahoria y papa con cebolla, sin lácteos.",
+       "calorias": 223,
+       "tiempo_preparacion": 30,
+       "nivel_salud": 5,
+       "protein_g": "4.30",
+       "carbs_g": "40.90",
+       "fat_g": "5.50",
+       "saturated_fat_g": "0.70",
+       "sugar_g": "12.30",
+       "fiber_g": "8.70",
+       "sodium_mg": "727.50",
+       "serving_size_g": "356.50",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 15,
+       "nombre": "Ensalada de garbanzos y atún",
+       "descripcion": "Garbanzos, atún, tomate, cebolla y limón.",
+       "calorias": 427,
+       "tiempo_preparacion": 15,
+       "nivel_salud": 5,
+       "protein_g": "37.00",
+       "carbs_g": "48.40",
+       "fat_g": "10.20",
+       "saturated_fat_g": "1.40",
+       "sugar_g": "10.90",
+       "fiber_g": "13.30",
+       "sodium_mg": "441.30",
+       "serving_size_g": "361.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 6,
+       "nombre": "Lentejas guisadas",
+       "descripcion": "Lentejas con zanahoria, tomate y cebolla, acompañadas de arroz integral.",
+       "calorias": 446,
+       "tiempo_preparacion": 45,
+       "nivel_salud": 5,
+       "protein_g": "22.10",
+       "carbs_g": "76.50",
+       "fat_g": "7.10",
+       "saturated_fat_g": "1.20",
+       "sugar_g": "9.40",
+       "fiber_g": "20.20",
+       "sodium_mg": "628.60",
+       "serving_size_g": "456.50",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 2,
+       "nombre": "Bowl de quinoa con garbanzos",
+       "descripcion": "Quinoa con garbanzos, tomate, espinaca y aguacate; alto en fibra y proteína vegetal.",
+       "calorias": 492,
+       "tiempo_preparacion": 25,
+       "nivel_salud": 5,
+       "protein_g": "18.40",
+       "carbs_g": "68.20",
+       "fat_g": "18.10",
+       "saturated_fat_g": "2.40",
+       "sugar_g": "8.70",
+       "fiber_g": "17.00",
+       "sodium_mg": "444.30",
+       "serving_size_g": "426.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 1,
+       "nombre": "Pollo con arroz integral y brócoli",
+       "descripcion": "Pechuga de pollo a la plancha con arroz integral, brócoli al vapor y un toque de limón.",
+       "calorias": 513,
+       "tiempo_preparacion": 35,
+       "nivel_salud": 5,
+       "protein_g": "53.50",
+       "carbs_g": "45.90",
+       "fat_g": "12.30",
+       "saturated_fat_g": "2.60",
+       "sugar_g": "2.20",
+       "fiber_g": "5.30",
+       "sodium_mg": "537.90",
+       "serving_size_g": "416.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 5,
+       "nombre": "Tortilla de espinaca",
+       "descripcion": "Huevos batidos con espinaca y cebolla, servidos con tomate.",
+       "calorias": 252,
+       "tiempo_preparacion": 15,
+       "nivel_salud": 4,
+       "protein_g": "17.70",
+       "carbs_g": "8.10",
+       "fat_g": "16.80",
+       "saturated_fat_g": "4.50",
+       "sugar_g": "3.50",
+       "fiber_g": "2.50",
+       "sodium_mg": "609.70",
+       "serving_size_g": "276.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      }
+     ],
+     "pagination": {
+      "limit": 6,
+      "offset": 0,
+      "nextOffset": 6,
+      "hasMore": true
+     }
+    }
+   },
+   "GET /recipes/4": {
+    "status": 200,
+    "body": {
+     "id": 4,
+     "nombre": "Avena con fresas y chía",
+     "descripcion": "Desayuno de avena cocida en leche con fresas, chía y miel.",
+     "calorias": 383,
+     "tiempo_preparacion": 10,
+     "nivel_salud": 4,
+     "protein_g": "17.50",
+     "carbs_g": "61.70",
+     "fat_g": "8.80",
+     "saturated_fat_g": "2.10",
+     "sugar_g": "22.60",
+     "fiber_g": "10.30",
+     "sodium_mg": "91.80",
+     "serving_size_g": "350.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/4/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 10,
+      "nombre": "avena"
+     },
+     {
+      "id": 23,
+      "nombre": "fresa"
+     },
+     {
+      "id": 25,
+      "nombre": "leche"
+     },
+     {
+      "id": 35,
+      "nombre": "miel"
+     },
+     {
+      "id": 31,
+      "nombre": "semillas de chia"
+     }
+    ]
+   },
+   "GET /recipes/check/4/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [
+      {
+       "id": 10,
+       "nombre": "avena",
+       "food_group": "carbohydrate",
+       "substitution_group": "grain"
+      },
+      {
+       "id": 25,
+       "nombre": "leche",
+       "food_group": "dairy",
+       "substitution_group": "dairy_milk"
+      }
+     ],
+     "substitutes": [
+      {
+       "ingredienteOriginal": "avena",
+       "substitutionGroup": "grain",
+       "opciones": [
+        {
+         "id": 8,
+         "nombre": "arroz integral",
+         "food_group": "carbohydrate",
+         "substitution_group": "grain"
+        },
+        {
+         "id": 9,
+         "nombre": "quinoa",
+         "food_group": "carbohydrate",
+         "substitution_group": "grain"
+        }
+       ]
+      },
+      {
+       "ingredienteOriginal": "leche",
+       "substitutionGroup": "dairy_milk",
+       "opciones": []
+      }
+     ]
+    }
+   },
+   "GET /recipes/safe/1": {
+    "status": 200,
+    "body": [
+     {
+      "id": 16,
+      "nombre": "Crema de zanahoria",
+      "descripcion": "Crema de zanahoria y papa con cebolla, sin lácteos.",
+      "calorias": 223,
+      "tiempo_preparacion": 30,
+      "nivel_salud": 5,
+      "protein_g": "4.30",
+      "carbs_g": "40.90",
+      "fat_g": "5.50",
+      "saturated_fat_g": "0.70",
+      "sugar_g": "12.30",
+      "fiber_g": "8.70",
+      "sodium_mg": "727.50",
+      "serving_size_g": "356.50",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 15,
+      "nombre": "Ensalada de garbanzos y atún",
+      "descripcion": "Garbanzos, atún, tomate, cebolla y limón.",
+      "calorias": 427,
+      "tiempo_preparacion": 15,
+      "nivel_salud": 5,
+      "protein_g": "37.00",
+      "carbs_g": "48.40",
+      "fat_g": "10.20",
+      "saturated_fat_g": "1.40",
+      "sugar_g": "10.90",
+      "fiber_g": "13.30",
+      "sodium_mg": "441.30",
+      "serving_size_g": "361.00",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 6,
+      "nombre": "Lentejas guisadas",
+      "descripcion": "Lentejas con zanahoria, tomate y cebolla, acompañadas de arroz integral.",
+      "calorias": 446,
+      "tiempo_preparacion": 45,
+      "nivel_salud": 5,
+      "protein_g": "22.10",
+      "carbs_g": "76.50",
+      "fat_g": "7.10",
+      "saturated_fat_g": "1.20",
+      "sugar_g": "9.40",
+      "fiber_g": "20.20",
+      "sodium_mg": "628.60",
+      "serving_size_g": "456.50",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 2,
+      "nombre": "Bowl de quinoa con garbanzos",
+      "descripcion": "Quinoa con garbanzos, tomate, espinaca y aguacate; alto en fibra y proteína vegetal.",
+      "calorias": 492,
+      "tiempo_preparacion": 25,
+      "nivel_salud": 5,
+      "protein_g": "18.40",
+      "carbs_g": "68.20",
+      "fat_g": "18.10",
+      "saturated_fat_g": "2.40",
+      "sugar_g": "8.70",
+      "fiber_g": "17.00",
+      "sodium_mg": "444.30",
+      "serving_size_g": "426.00",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 1,
+      "nombre": "Pollo con arroz integral y brócoli",
+      "descripcion": "Pechuga de pollo a la plancha con arroz integral, brócoli al vapor y un toque de limón.",
+      "calorias": 513,
+      "tiempo_preparacion": 35,
+      "nivel_salud": 5,
+      "protein_g": "53.50",
+      "carbs_g": "45.90",
+      "fat_g": "12.30",
+      "saturated_fat_g": "2.60",
+      "sugar_g": "2.20",
+      "fiber_g": "5.30",
+      "sodium_mg": "537.90",
+      "serving_size_g": "416.00",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 5,
+      "nombre": "Tortilla de espinaca",
+      "descripcion": "Huevos batidos con espinaca y cebolla, servidos con tomate.",
+      "calorias": 252,
+      "tiempo_preparacion": 15,
+      "nivel_salud": 4,
+      "protein_g": "17.70",
+      "carbs_g": "8.10",
+      "fat_g": "16.80",
+      "saturated_fat_g": "4.50",
+      "sugar_g": "3.50",
+      "fiber_g": "2.50",
+      "sodium_mg": "609.70",
+      "serving_size_g": "276.00",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 9,
+      "nombre": "Tacos de frijol y aguacate",
+      "descripcion": "Tortillas de maíz con frijoles negros, aguacate, lechuga y tomate.",
+      "calorias": 504,
+      "tiempo_preparacion": 20,
+      "nivel_salud": 4,
+      "protein_g": "20.60",
+      "carbs_g": "83.60",
+      "fat_g": "12.30",
+      "saturated_fat_g": "1.80",
+      "sugar_g": "3.20",
+      "fiber_g": "23.70",
+      "sodium_mg": "444.70",
+      "serving_size_g": "381.00",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 3,
+      "nombre": "Salmón al horno con papa",
+      "descripcion": "Filete de salmón horneado con papa cocida y ensalada fresca.",
+      "calorias": 527,
+      "tiempo_preparacion": 40,
+      "nivel_salud": 4,
+      "protein_g": "35.20",
+      "carbs_g": "37.40",
+      "fat_g": "24.90",
+      "saturated_fat_g": "5.40",
+      "sugar_g": "3.30",
+      "fiber_g": "5.70",
+      "sodium_mg": "504.70",
+      "serving_size_g": "456.00",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 10,
+      "nombre": "Camarones al ajillo con arroz",
+      "descripcion": "Camarones salteados con cebolla y limón, acompañados de arroz integral.",
+      "calorias": 442,
+      "tiempo_preparacion": 25,
+      "nivel_salud": 3,
+      "protein_g": "40.70",
+      "carbs_g": "43.80",
+      "fat_g": "12.00",
+      "saturated_fat_g": "2.00",
+      "sugar_g": "2.40",
+      "fiber_g": "3.50",
+      "sodium_mg": "756.00",
+      "serving_size_g": "366.50",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     },
+     {
+      "id": 13,
+      "nombre": "Carne de res con papa y ensalada",
+      "descripcion": "Carne de res a la plancha con papa al horno y ensalada.",
+      "calorias": 576,
+      "tiempo_preparacion": 35,
+      "nivel_salud": 3,
+      "protein_g": "43.80",
+      "carbs_g": "34.40",
+      "fat_g": "27.90",
+      "saturated_fat_g": "9.70",
+      "sugar_g": "3.40",
+      "fiber_g": "5.30",
+      "sodium_mg": "717.30",
+      "serving_size_g": "446.50",
+      "servings": "1.00",
+      "nutrition_source": "calculated",
+      "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+      "external_key": null,
+      "nutrition_source_reference": "Calculado a partir de los ingredientes",
+      "nutrition_reviewed_by": null
+     }
+    ]
+   },
+   "GET /profile/catalogs": {
+    "status": 200,
+    "body": {
+     "goals": [
+      {
+       "id": 9,
+       "code": "increase_energy",
+       "nombre": "Aumentar energia",
+       "descripcion": "Mejorar distribucion de comidas, hidratacion y calidad de nutrientes."
+      },
+      {
+       "id": 5,
+       "code": "control_glucose",
+       "nombre": "Controlar glucosa",
+       "descripcion": "Apoyar control de glucosa con calidad de carbohidratos, fibra y reduccion de azucar anadida."
+      },
+      {
+       "id": 7,
+       "code": "control_blood_pressure",
+       "nombre": "Controlar presion arterial",
+       "descripcion": "Reducir sodio y apoyar habitos alimentarios compatibles con control de presion arterial."
+      },
+      {
+       "id": 1,
+       "code": "gain_muscle",
+       "nombre": "Ganar masa muscular",
+       "descripcion": "Aumentar masa muscular con soporte de proteina, energia suficiente y habitos de entrenamiento."
+      },
+      {
+       "id": 12,
+       "code": "manage_allergies",
+       "nombre": "Manejar alergias o intolerancias",
+       "descripcion": "Evitar ingredientes incompatibles y sugerir alternativas seguras."
+      },
+      {
+       "id": 3,
+       "code": "maintain_weight",
+       "nombre": "Mantener peso",
+       "descripcion": "Mantener composicion corporal y habitos sostenibles."
+      },
+      {
+       "id": 8,
+       "code": "improve_digestion",
+       "nombre": "Mejorar digestion",
+       "descripcion": "Identificar tolerancias, mejorar fibra y reducir detonantes digestivos."
+      },
+      {
+       "id": 10,
+       "code": "sports_performance",
+       "nombre": "Mejorar rendimiento deportivo",
+       "descripcion": "Ajustar energia, proteina, carbohidratos e hidratacion segun actividad."
+      },
+      {
+       "id": 4,
+       "code": "general_health",
+       "nombre": "Mejorar salud general",
+       "descripcion": "Mejorar calidad alimentaria, variedad y equilibrio nutricional."
+      },
+      {
+       "id": 2,
+       "code": "lose_body_fat",
+       "nombre": "Perder grasa corporal",
+       "descripcion": "Reducir grasa corporal con control calorico, proteina suficiente y alimentos de alta saciedad."
+      },
+      {
+       "id": 6,
+       "code": "reduce_cholesterol",
+       "nombre": "Reducir colesterol",
+       "descripcion": "Priorizar fibra, grasas saludables y reduccion de grasa saturada."
+      },
+      {
+       "id": 11,
+       "code": "medical_diet",
+       "nombre": "Seguir dieta por indicacion medica",
+       "descripcion": "Adaptar recomendaciones a instrucciones clinicas confirmadas."
+      }
+     ],
+     "conditions": [
+      {
+       "id": 11,
+       "code": "anemia",
+       "nombre": "Anemia",
+       "descripcion": "Condicion relacionada con niveles bajos de hemoglobina o hierro, segun diagnostico.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 3,
+       "code": "high_cholesterol",
+       "nombre": "Colesterol alto",
+       "descripcion": "Condicion que puede requerir control de grasa saturada y aumento de fibra.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 10,
+       "code": "ibs",
+       "nombre": "Colon irritable",
+       "descripcion": "Condicion digestiva con sensibilidad a grupos de alimentos o habitos.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 9,
+       "code": "gastritis",
+       "nombre": "Gastritis",
+       "descripcion": "Condicion digestiva que puede requerir evitar irritantes.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 7,
+       "code": "lactose_intolerance",
+       "nombre": "Intolerancia a lactosa",
+       "descripcion": "Dificultad para digerir lactosa presente en lacteos.",
+       "risk_level": "medium",
+       "requires_professional_guidance": false
+      },
+      {
+       "id": 13,
+       "code": "obesity",
+       "nombre": "Obesidad",
+       "descripcion": "Condicion que puede requerir objetivos personalizados de energia, calidad alimentaria y seguimiento.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 8,
+       "code": "food_allergies",
+       "nombre": "Alergias alimentarias",
+       "descripcion": "Alergias que requieren evitar ingredientes especificos.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 6,
+       "code": "celiac_disease",
+       "nombre": "Celiaquia",
+       "descripcion": "Condicion que requiere evitar gluten.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 1,
+       "code": "diabetes",
+       "nombre": "Diabetes",
+       "descripcion": "Condicion que requiere control de carbohidratos, azucar anadida y calidad de la dieta.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 12,
+       "code": "pregnancy",
+       "nombre": "Embarazo",
+       "descripcion": "Etapa que requiere necesidades nutricionales especificas y cuidado clinico.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 5,
+       "code": "heart_disease",
+       "nombre": "Enfermedad cardiaca",
+       "descripcion": "Condicion cardiovascular que requiere recomendaciones conservadoras y supervisadas.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 4,
+       "code": "kidney_disease",
+       "nombre": "Enfermedad renal",
+       "descripcion": "Condicion que puede requerir control de proteina, sodio, potasio, fosforo y liquidos.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 2,
+       "code": "hypertension",
+       "nombre": "Hipertension",
+       "descripcion": "Condicion relacionada con presion arterial elevada y control de sodio.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      }
+     ]
+    }
+   },
+   "GET /profile": {
+    "status": 200,
+    "body": {
+     "profile": {
+      "usuario_id": 1,
+      "fecha_nacimiento": "1998-05-14T05:00:00.000Z",
+      "sexo": "female",
+      "estatura_cm": "165.00",
+      "peso_kg": "62.00",
+      "nivel_actividad": "moderate",
+      "condicion_fisica": "active",
+      "habitos_alimentarios": {
+       "meals_per_day": "3",
+       "eats_out_frequency": "weekly"
+      },
+      "preferencias_alimentarias": {
+       "diet_style": "omnivore",
+       "cooking_time": "medium"
+      },
+      "notas": "Prefiere preparaciones caseras.",
+      "created_at": "2026-10-24T20:17:47.662Z",
+      "updated_at": "2026-10-24T20:18:06.341Z"
+     },
+     "goals": [
+      {
+       "objetivo_id": 4,
+       "prioridad": 1,
+       "estado": "active",
+       "code": "general_health",
+       "nombre": "Mejorar salud general",
+       "descripcion": "Mejorar calidad alimentaria, variedad y equilibrio nutricional."
+      },
+      {
+       "objetivo_id": 3,
+       "prioridad": 2,
+       "estado": "active",
+       "code": "maintain_weight",
+       "nombre": "Mantener peso",
+       "descripcion": "Mantener composicion corporal y habitos sostenibles."
+      }
+     ],
+     "conditions": [
+      {
+       "condicion_id": 7,
+       "source": "user",
+       "confirmed_at": "2026-10-24T20:17:47.688Z",
+       "notes": null,
+       "code": "lactose_intolerance",
+       "nombre": "Intolerancia a lactosa",
+       "descripcion": "Dificultad para digerir lactosa presente en lacteos.",
+       "risk_level": "medium",
+       "requires_professional_guidance": false
+      },
+      {
+       "condicion_id": 6,
+       "source": "user",
+       "confirmed_at": "2026-10-24T20:17:47.688Z",
+       "notes": null,
+       "code": "celiac_disease",
+       "nombre": "Celiaquia",
+       "descripcion": "Condicion que requiere evitar gluten.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      }
+     ],
+     "targets": null
+    }
+   },
+   "GET /users/restrictions": {
+    "status": 200,
+    "body": {
+     "restrictions": [
+      {
+       "restriccion_id": 1,
+       "nombre": "Gluten"
+      },
+      {
+       "restriccion_id": 2,
+       "nombre": "Lactosa"
+      },
+      {
+       "restriccion_id": 3,
+       "nombre": "Mariscos"
+      },
+      {
+       "restriccion_id": 4,
+       "nombre": "Frutos secos"
+      },
+      {
+       "restriccion_id": 5,
+       "nombre": "Huevo"
+      },
+      {
+       "restriccion_id": 6,
+       "nombre": "Pescado"
+      },
+      {
+       "restriccion_id": 7,
+       "nombre": "Soya"
+      }
+     ]
+    }
+   },
+   "GET /recipes/1": {
+    "status": 200,
+    "body": {
+     "id": 1,
+     "nombre": "Pollo con arroz integral y brócoli",
+     "descripcion": "Pechuga de pollo a la plancha con arroz integral, brócoli al vapor y un toque de limón.",
+     "calorias": 513,
+     "tiempo_preparacion": 35,
+     "nivel_salud": 5,
+     "protein_g": "53.50",
+     "carbs_g": "45.90",
+     "fat_g": "12.30",
+     "saturated_fat_g": "2.60",
+     "sugar_g": "2.20",
+     "fiber_g": "5.30",
+     "sodium_mg": "537.90",
+     "serving_size_g": "416.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/1/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 8,
+      "nombre": "arroz integral"
+     },
+     {
+      "id": 15,
+      "nombre": "brocoli"
+     },
+     {
+      "id": 24,
+      "nombre": "limon"
+     },
+     {
+      "id": 1,
+      "nombre": "pechuga de pollo"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     }
+    ]
+   },
+   "GET /recipes/check/1/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/2": {
+    "status": 200,
+    "body": {
+     "id": 2,
+     "nombre": "Bowl de quinoa con garbanzos",
+     "descripcion": "Quinoa con garbanzos, tomate, espinaca y aguacate; alto en fibra y proteína vegetal.",
+     "calorias": 492,
+     "tiempo_preparacion": 25,
+     "nivel_salud": 5,
+     "protein_g": "18.40",
+     "carbs_g": "68.20",
+     "fat_g": "18.10",
+     "saturated_fat_g": "2.40",
+     "sugar_g": "8.70",
+     "fiber_g": "17.00",
+     "sodium_mg": "444.30",
+     "serving_size_g": "426.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/2/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 21,
+      "nombre": "aguacate"
+     },
+     {
+      "id": 16,
+      "nombre": "espinaca"
+     },
+     {
+      "id": 33,
+      "nombre": "garbanzos"
+     },
+     {
+      "id": 9,
+      "nombre": "quinoa"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     }
+    ]
+   },
+   "GET /recipes/check/2/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/3": {
+    "status": 200,
+    "body": {
+     "id": 3,
+     "nombre": "Salmón al horno con papa",
+     "descripcion": "Filete de salmón horneado con papa cocida y ensalada fresca.",
+     "calorias": 527,
+     "tiempo_preparacion": 40,
+     "nivel_salud": 4,
+     "protein_g": "35.20",
+     "carbs_g": "37.40",
+     "fat_g": "24.90",
+     "saturated_fat_g": "5.40",
+     "sugar_g": "3.30",
+     "fiber_g": "5.70",
+     "sodium_mg": "504.70",
+     "serving_size_g": "456.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/3/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 20,
+      "nombre": "lechuga"
+     },
+     {
+      "id": 14,
+      "nombre": "papa"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 3,
+      "nombre": "salmon"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     }
+    ]
+   },
+   "GET /recipes/check/3/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/5": {
+    "status": 200,
+    "body": {
+     "id": 5,
+     "nombre": "Tortilla de espinaca",
+     "descripcion": "Huevos batidos con espinaca y cebolla, servidos con tomate.",
+     "calorias": 252,
+     "tiempo_preparacion": 15,
+     "nivel_salud": 4,
+     "protein_g": "17.70",
+     "carbs_g": "8.10",
+     "fat_g": "16.80",
+     "saturated_fat_g": "4.50",
+     "sugar_g": "3.50",
+     "fiber_g": "2.50",
+     "sodium_mg": "609.70",
+     "serving_size_g": "276.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/5/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 19,
+      "nombre": "cebolla"
+     },
+     {
+      "id": 16,
+      "nombre": "espinaca"
+     },
+     {
+      "id": 2,
+      "nombre": "huevo"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     }
+    ]
+   },
+   "GET /recipes/check/5/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/6": {
+    "status": 200,
+    "body": {
+     "id": 6,
+     "nombre": "Lentejas guisadas",
+     "descripcion": "Lentejas con zanahoria, tomate y cebolla, acompañadas de arroz integral.",
+     "calorias": 446,
+     "tiempo_preparacion": 45,
+     "nivel_salud": 5,
+     "protein_g": "22.10",
+     "carbs_g": "76.50",
+     "fat_g": "7.10",
+     "saturated_fat_g": "1.20",
+     "sugar_g": "9.40",
+     "fiber_g": "20.20",
+     "sodium_mg": "628.60",
+     "serving_size_g": "456.50",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/6/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 8,
+      "nombre": "arroz integral"
+     },
+     {
+      "id": 19,
+      "nombre": "cebolla"
+     },
+     {
+      "id": 32,
+      "nombre": "lentejas"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     },
+     {
+      "id": 18,
+      "nombre": "zanahoria"
+     }
+    ]
+   },
+   "GET /recipes/check/6/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/7": {
+    "status": 200,
+    "body": {
+     "id": 7,
+     "nombre": "Salteado de tofu y vegetales",
+     "descripcion": "Tofu salteado con brócoli, zanahoria y salsa de soya sobre arroz integral.",
+     "calorias": 370,
+     "tiempo_preparacion": 25,
+     "nivel_salud": 4,
+     "protein_g": "19.40",
+     "carbs_g": "46.40",
+     "fat_g": "14.00",
+     "saturated_fat_g": "2.10",
+     "sugar_g": "5.70",
+     "fiber_g": "6.70",
+     "sodium_mg": "639.10",
+     "serving_size_g": "445.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/7/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 8,
+      "nombre": "arroz integral"
+     },
+     {
+      "id": 15,
+      "nombre": "brocoli"
+     },
+     {
+      "id": 37,
+      "nombre": "salsa de soya"
+     },
+     {
+      "id": 6,
+      "nombre": "tofu"
+     },
+     {
+      "id": 18,
+      "nombre": "zanahoria"
+     }
+    ]
+   },
+   "GET /recipes/check/7/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [
+      {
+       "id": 37,
+       "nombre": "salsa de soya",
+       "food_group": "seasoning",
+       "substitution_group": "other"
+      }
+     ],
+     "substitutes": [
+      {
+       "ingredienteOriginal": "salsa de soya",
+       "substitutionGroup": "other",
+       "opciones": []
+      }
+     ]
+    }
+   },
+   "GET /recipes/8": {
+    "status": 200,
+    "body": {
+     "id": 8,
+     "nombre": "Pasta integral con atún",
+     "descripcion": "Pasta integral con atún, tomate fresco y aceite de oliva.",
+     "calorias": 444,
+     "tiempo_preparacion": 20,
+     "nivel_salud": 4,
+     "protein_g": "37.90",
+     "carbs_g": "48.90",
+     "fat_g": "12.10",
+     "saturated_fat_g": "1.90",
+     "sugar_g": "3.80",
+     "fiber_g": "7.00",
+     "sodium_mg": "445.70",
+     "serving_size_g": "359.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/8/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 4,
+      "nombre": "atun"
+     },
+     {
+      "id": 11,
+      "nombre": "pasta integral"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     }
+    ]
+   },
+   "GET /recipes/check/8/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [
+      {
+       "id": 11,
+       "nombre": "pasta integral",
+       "food_group": "carbohydrate",
+       "substitution_group": "pasta"
+      }
+     ],
+     "substitutes": [
+      {
+       "ingredienteOriginal": "pasta integral",
+       "substitutionGroup": "pasta",
+       "opciones": []
+      }
+     ]
+    }
+   },
+   "GET /recipes/9": {
+    "status": 200,
+    "body": {
+     "id": 9,
+     "nombre": "Tacos de frijol y aguacate",
+     "descripcion": "Tortillas de maíz con frijoles negros, aguacate, lechuga y tomate.",
+     "calorias": 504,
+     "tiempo_preparacion": 20,
+     "nivel_salud": 4,
+     "protein_g": "20.60",
+     "carbs_g": "83.60",
+     "fat_g": "12.30",
+     "saturated_fat_g": "1.80",
+     "sugar_g": "3.20",
+     "fiber_g": "23.70",
+     "sodium_mg": "444.70",
+     "serving_size_g": "381.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/9/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 21,
+      "nombre": "aguacate"
+     },
+     {
+      "id": 34,
+      "nombre": "frijoles negros"
+     },
+     {
+      "id": 20,
+      "nombre": "lechuga"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     },
+     {
+      "id": 13,
+      "nombre": "tortilla de maiz"
+     }
+    ]
+   },
+   "GET /recipes/check/9/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/10": {
+    "status": 200,
+    "body": {
+     "id": 10,
+     "nombre": "Camarones al ajillo con arroz",
+     "descripcion": "Camarones salteados con cebolla y limón, acompañados de arroz integral.",
+     "calorias": 442,
+     "tiempo_preparacion": 25,
+     "nivel_salud": 3,
+     "protein_g": "40.70",
+     "carbs_g": "43.80",
+     "fat_g": "12.00",
+     "saturated_fat_g": "2.00",
+     "sugar_g": "2.40",
+     "fiber_g": "3.50",
+     "sodium_mg": "756.00",
+     "serving_size_g": "366.50",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/10/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 8,
+      "nombre": "arroz integral"
+     },
+     {
+      "id": 5,
+      "nombre": "camaron"
+     },
+     {
+      "id": 19,
+      "nombre": "cebolla"
+     },
+     {
+      "id": 24,
+      "nombre": "limon"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     }
+    ]
+   },
+   "GET /recipes/check/10/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/11": {
+    "status": 200,
+    "body": {
+     "id": 11,
+     "nombre": "Yogur con banano y almendras",
+     "descripcion": "Yogur natural con banano, almendras tostadas y miel.",
+     "calorias": 357,
+     "tiempo_preparacion": 5,
+     "nivel_salud": 3,
+     "protein_g": "12.30",
+     "carbs_g": "44.80",
+     "fat_g": "16.90",
+     "saturated_fat_g": "5.10",
+     "sugar_g": "30.70",
+     "fiber_g": "5.10",
+     "sodium_mg": "93.60",
+     "serving_size_g": "330.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/11/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 30,
+      "nombre": "almendras"
+     },
+     {
+      "id": 22,
+      "nombre": "banano"
+     },
+     {
+      "id": 35,
+      "nombre": "miel"
+     },
+     {
+      "id": 26,
+      "nombre": "yogur natural"
+     }
+    ]
+   },
+   "GET /recipes/check/11/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [
+      {
+       "id": 26,
+       "nombre": "yogur natural",
+       "food_group": "dairy",
+       "substitution_group": "cultured_dairy"
+      }
+     ],
+     "substitutes": [
+      {
+       "ingredienteOriginal": "yogur natural",
+       "substitutionGroup": "cultured_dairy",
+       "opciones": []
+      }
+     ]
+    }
+   },
+   "GET /recipes/12": {
+    "status": 200,
+    "body": {
+     "id": 12,
+     "nombre": "Batido de banano y bebida de almendra",
+     "descripcion": "Batido sin lactosa de banano, bebida de almendra y avena.",
+     "calorias": 261,
+     "tiempo_preparacion": 5,
+     "nivel_salud": 4,
+     "protein_g": "7.90",
+     "carbs_g": "48.00",
+     "fat_g": "5.40",
+     "saturated_fat_g": "0.70",
+     "sugar_g": "14.90",
+     "fiber_g": "6.80",
+     "sodium_mg": "176.80",
+     "serving_size_g": "400.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/12/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 10,
+      "nombre": "avena"
+     },
+     {
+      "id": 22,
+      "nombre": "banano"
+     },
+     {
+      "id": 28,
+      "nombre": "bebida de almendra"
+     }
+    ]
+   },
+   "GET /recipes/check/12/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [
+      {
+       "id": 10,
+       "nombre": "avena",
+       "food_group": "carbohydrate",
+       "substitution_group": "grain"
+      }
+     ],
+     "substitutes": [
+      {
+       "ingredienteOriginal": "avena",
+       "substitutionGroup": "grain",
+       "opciones": [
+        {
+         "id": 8,
+         "nombre": "arroz integral",
+         "food_group": "carbohydrate",
+         "substitution_group": "grain"
+        },
+        {
+         "id": 9,
+         "nombre": "quinoa",
+         "food_group": "carbohydrate",
+         "substitution_group": "grain"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "GET /recipes/13": {
+    "status": 200,
+    "body": {
+     "id": 13,
+     "nombre": "Carne de res con papa y ensalada",
+     "descripcion": "Carne de res a la plancha con papa al horno y ensalada.",
+     "calorias": 576,
+     "tiempo_preparacion": 35,
+     "nivel_salud": 3,
+     "protein_g": "43.80",
+     "carbs_g": "34.40",
+     "fat_g": "27.90",
+     "saturated_fat_g": "9.70",
+     "sugar_g": "3.40",
+     "fiber_g": "5.30",
+     "sodium_mg": "717.30",
+     "serving_size_g": "446.50",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/13/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 7,
+      "nombre": "carne de res"
+     },
+     {
+      "id": 20,
+      "nombre": "lechuga"
+     },
+     {
+      "id": 14,
+      "nombre": "papa"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     }
+    ]
+   },
+   "GET /recipes/check/13/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/14": {
+    "status": 200,
+    "body": {
+     "id": 14,
+     "nombre": "Sándwich integral de pollo",
+     "descripcion": "Pan integral con pollo desmenuzado, lechuga, tomate y queso.",
+     "calorias": 493,
+     "tiempo_preparacion": 15,
+     "nivel_salud": 3,
+     "protein_g": "49.50",
+     "carbs_g": "35.30",
+     "fat_g": "16.30",
+     "saturated_fat_g": "7.90",
+     "sugar_g": "6.20",
+     "fiber_g": "6.30",
+     "sodium_mg": "627.90",
+     "serving_size_g": "270.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/14/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 20,
+      "nombre": "lechuga"
+     },
+     {
+      "id": 12,
+      "nombre": "pan integral"
+     },
+     {
+      "id": 1,
+      "nombre": "pechuga de pollo"
+     },
+     {
+      "id": 27,
+      "nombre": "queso"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     }
+    ]
+   },
+   "GET /recipes/check/14/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [
+      {
+       "id": 12,
+       "nombre": "pan integral",
+       "food_group": "carbohydrate",
+       "substitution_group": "bread"
+      },
+      {
+       "id": 27,
+       "nombre": "queso",
+       "food_group": "dairy",
+       "substitution_group": "cheese"
+      }
+     ],
+     "substitutes": [
+      {
+       "ingredienteOriginal": "pan integral",
+       "substitutionGroup": "bread",
+       "opciones": []
+      },
+      {
+       "ingredienteOriginal": "queso",
+       "substitutionGroup": "cheese",
+       "opciones": []
+      }
+     ]
+    }
+   },
+   "GET /recipes/15": {
+    "status": 200,
+    "body": {
+     "id": 15,
+     "nombre": "Ensalada de garbanzos y atún",
+     "descripcion": "Garbanzos, atún, tomate, cebolla y limón.",
+     "calorias": 427,
+     "tiempo_preparacion": 15,
+     "nivel_salud": 5,
+     "protein_g": "37.00",
+     "carbs_g": "48.40",
+     "fat_g": "10.20",
+     "saturated_fat_g": "1.40",
+     "sugar_g": "10.90",
+     "fiber_g": "13.30",
+     "sodium_mg": "441.30",
+     "serving_size_g": "361.00",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/15/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 4,
+      "nombre": "atun"
+     },
+     {
+      "id": 19,
+      "nombre": "cebolla"
+     },
+     {
+      "id": 33,
+      "nombre": "garbanzos"
+     },
+     {
+      "id": 24,
+      "nombre": "limon"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 17,
+      "nombre": "tomate"
+     }
+    ]
+   },
+   "GET /recipes/check/15/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/16": {
+    "status": 200,
+    "body": {
+     "id": 16,
+     "nombre": "Crema de zanahoria",
+     "descripcion": "Crema de zanahoria y papa con cebolla, sin lácteos.",
+     "calorias": 223,
+     "tiempo_preparacion": 30,
+     "nivel_salud": 5,
+     "protein_g": "4.30",
+     "carbs_g": "40.90",
+     "fat_g": "5.50",
+     "saturated_fat_g": "0.70",
+     "sugar_g": "12.30",
+     "fiber_g": "8.70",
+     "sodium_mg": "727.50",
+     "serving_size_g": "356.50",
+     "servings": "1.00",
+     "nutrition_source": "calculated",
+     "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+     "external_key": null,
+     "nutrition_source_reference": "Calculado a partir de los ingredientes",
+     "nutrition_reviewed_by": null,
+     "isFavorite": false
+    }
+   },
+   "GET /recipes/16/ingredients": {
+    "status": 200,
+    "body": [
+     {
+      "id": 29,
+      "nombre": "aceite de oliva"
+     },
+     {
+      "id": 19,
+      "nombre": "cebolla"
+     },
+     {
+      "id": 14,
+      "nombre": "papa"
+     },
+     {
+      "id": 36,
+      "nombre": "sal"
+     },
+     {
+      "id": 18,
+      "nombre": "zanahoria"
+     }
+    ]
+   },
+   "GET /recipes/check/16/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/search/1?query=avena&paginated=true&limit=12&offset=0": {
+    "status": 200,
+    "body": {
+     "recipes": [
+      {
+       "id": 12,
+       "nombre": "Batido de banano y bebida de almendra",
+       "descripcion": "Batido sin lactosa de banano, bebida de almendra y avena.",
+       "calorias": 261,
+       "tiempo_preparacion": 5,
+       "nivel_salud": 4,
+       "protein_g": "7.90",
+       "carbs_g": "48.00",
+       "fat_g": "5.40",
+       "saturated_fat_g": "0.70",
+       "sugar_g": "14.90",
+       "fiber_g": "6.80",
+       "sodium_mg": "176.80",
+       "serving_size_g": "400.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": true
+      },
+      {
+       "id": 4,
+       "nombre": "Avena con fresas y chía",
+       "descripcion": "Desayuno de avena cocida en leche con fresas, chía y miel.",
+       "calorias": 383,
+       "tiempo_preparacion": 10,
+       "nivel_salud": 4,
+       "protein_g": "17.50",
+       "carbs_g": "61.70",
+       "fat_g": "8.80",
+       "saturated_fat_g": "2.10",
+       "sugar_g": "22.60",
+       "fiber_g": "10.30",
+       "sodium_mg": "91.80",
+       "serving_size_g": "350.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": true
+      }
+     ],
+     "pagination": {
+      "limit": 12,
+      "offset": 0,
+      "nextOffset": null,
+      "hasMore": false
+     }
+    }
+   },
+   "GET /recipes/search/1?query=pizza&paginated=true&limit=12&offset=0": {
+    "status": 200,
+    "body": {
+     "recipes": [],
+     "pagination": {
+      "limit": 12,
+      "offset": 0,
+      "nextOffset": null,
+      "hasMore": false
+     }
+    }
+   },
+   "GET /recipes/99999/ingredients": {
+    "status": 200,
+    "body": []
+   },
+   "GET /recipes/check/99999/1": {
+    "status": 200,
+    "body": {
+     "unsafeIngredients": [],
+     "substitutes": []
+    }
+   },
+   "GET /recipes/99999": {
+    "status": 404,
+    "body": {
+     "message": "Receta no encontrada"
+    }
+   },
+   "GET /recipes/search/1?query=ensalada&paginated=true&limit=12&offset=0": {
+    "status": 200,
+    "body": {
+     "recipes": [
+      {
+       "id": 15,
+       "nombre": "Ensalada de garbanzos y atún",
+       "descripcion": "Garbanzos, atún, tomate, cebolla y limón.",
+       "calorias": 427,
+       "tiempo_preparacion": 15,
+       "nivel_salud": 5,
+       "protein_g": "37.00",
+       "carbs_g": "48.40",
+       "fat_g": "10.20",
+       "saturated_fat_g": "1.40",
+       "sugar_g": "10.90",
+       "fiber_g": "13.30",
+       "sodium_mg": "441.30",
+       "serving_size_g": "361.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 3,
+       "nombre": "Salmón al horno con papa",
+       "descripcion": "Filete de salmón horneado con papa cocida y ensalada fresca.",
+       "calorias": 527,
+       "tiempo_preparacion": 40,
+       "nivel_salud": 4,
+       "protein_g": "35.20",
+       "carbs_g": "37.40",
+       "fat_g": "24.90",
+       "saturated_fat_g": "5.40",
+       "sugar_g": "3.30",
+       "fiber_g": "5.70",
+       "sodium_mg": "504.70",
+       "serving_size_g": "456.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 13,
+       "nombre": "Carne de res con papa y ensalada",
+       "descripcion": "Carne de res a la plancha con papa al horno y ensalada.",
+       "calorias": 576,
+       "tiempo_preparacion": 35,
+       "nivel_salud": 3,
+       "protein_g": "43.80",
+       "carbs_g": "34.40",
+       "fat_g": "27.90",
+       "saturated_fat_g": "9.70",
+       "sugar_g": "3.40",
+       "fiber_g": "5.30",
+       "sodium_mg": "717.30",
+       "serving_size_g": "446.50",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      }
+     ],
+     "pagination": {
+      "limit": 12,
+      "offset": 0,
+      "nextOffset": null,
+      "hasMore": false
+     }
+    }
+   },
+   "GET /recipes/search/1?query=ENSALADA&paginated=true&limit=12&offset=0": {
+    "status": 200,
+    "body": {
+     "recipes": [
+      {
+       "id": 15,
+       "nombre": "Ensalada de garbanzos y atún",
+       "descripcion": "Garbanzos, atún, tomate, cebolla y limón.",
+       "calorias": 427,
+       "tiempo_preparacion": 15,
+       "nivel_salud": 5,
+       "protein_g": "37.00",
+       "carbs_g": "48.40",
+       "fat_g": "10.20",
+       "saturated_fat_g": "1.40",
+       "sugar_g": "10.90",
+       "fiber_g": "13.30",
+       "sodium_mg": "441.30",
+       "serving_size_g": "361.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 3,
+       "nombre": "Salmón al horno con papa",
+       "descripcion": "Filete de salmón horneado con papa cocida y ensalada fresca.",
+       "calorias": 527,
+       "tiempo_preparacion": 40,
+       "nivel_salud": 4,
+       "protein_g": "35.20",
+       "carbs_g": "37.40",
+       "fat_g": "24.90",
+       "saturated_fat_g": "5.40",
+       "sugar_g": "3.30",
+       "fiber_g": "5.70",
+       "sodium_mg": "504.70",
+       "serving_size_g": "456.00",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      },
+      {
+       "id": 13,
+       "nombre": "Carne de res con papa y ensalada",
+       "descripcion": "Carne de res a la plancha con papa al horno y ensalada.",
+       "calorias": 576,
+       "tiempo_preparacion": 35,
+       "nivel_salud": 3,
+       "protein_g": "43.80",
+       "carbs_g": "34.40",
+       "fat_g": "27.90",
+       "saturated_fat_g": "9.70",
+       "sugar_g": "3.40",
+       "fiber_g": "5.30",
+       "sodium_mg": "717.30",
+       "serving_size_g": "446.50",
+       "servings": "1.00",
+       "nutrition_source": "calculated",
+       "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+       "external_key": null,
+       "nutrition_source_reference": "Calculado a partir de los ingredientes",
+       "nutrition_reviewed_by": null,
+       "isFavorite": false,
+       "hasUnsafeIngredients": false
+      }
+     ],
+     "pagination": {
+      "limit": 12,
+      "offset": 0,
+      "nextOffset": null,
+      "hasMore": false
+     }
+    }
+   }
+  },
+  "admin": {
+   "GET /users/restrictions/2": {
+    "status": 200,
+    "body": {
+     "hasRestrictions": false,
+     "restrictions": []
+    }
+   },
+   "GET /profile/catalogs": {
+    "status": 200,
+    "body": {
+     "goals": [
+      {
+       "id": 9,
+       "code": "increase_energy",
+       "nombre": "Aumentar energia",
+       "descripcion": "Mejorar distribucion de comidas, hidratacion y calidad de nutrientes."
+      },
+      {
+       "id": 5,
+       "code": "control_glucose",
+       "nombre": "Controlar glucosa",
+       "descripcion": "Apoyar control de glucosa con calidad de carbohidratos, fibra y reduccion de azucar anadida."
+      },
+      {
+       "id": 7,
+       "code": "control_blood_pressure",
+       "nombre": "Controlar presion arterial",
+       "descripcion": "Reducir sodio y apoyar habitos alimentarios compatibles con control de presion arterial."
+      },
+      {
+       "id": 1,
+       "code": "gain_muscle",
+       "nombre": "Ganar masa muscular",
+       "descripcion": "Aumentar masa muscular con soporte de proteina, energia suficiente y habitos de entrenamiento."
+      },
+      {
+       "id": 12,
+       "code": "manage_allergies",
+       "nombre": "Manejar alergias o intolerancias",
+       "descripcion": "Evitar ingredientes incompatibles y sugerir alternativas seguras."
+      },
+      {
+       "id": 3,
+       "code": "maintain_weight",
+       "nombre": "Mantener peso",
+       "descripcion": "Mantener composicion corporal y habitos sostenibles."
+      },
+      {
+       "id": 8,
+       "code": "improve_digestion",
+       "nombre": "Mejorar digestion",
+       "descripcion": "Identificar tolerancias, mejorar fibra y reducir detonantes digestivos."
+      },
+      {
+       "id": 10,
+       "code": "sports_performance",
+       "nombre": "Mejorar rendimiento deportivo",
+       "descripcion": "Ajustar energia, proteina, carbohidratos e hidratacion segun actividad."
+      },
+      {
+       "id": 4,
+       "code": "general_health",
+       "nombre": "Mejorar salud general",
+       "descripcion": "Mejorar calidad alimentaria, variedad y equilibrio nutricional."
+      },
+      {
+       "id": 2,
+       "code": "lose_body_fat",
+       "nombre": "Perder grasa corporal",
+       "descripcion": "Reducir grasa corporal con control calorico, proteina suficiente y alimentos de alta saciedad."
+      },
+      {
+       "id": 6,
+       "code": "reduce_cholesterol",
+       "nombre": "Reducir colesterol",
+       "descripcion": "Priorizar fibra, grasas saludables y reduccion de grasa saturada."
+      },
+      {
+       "id": 11,
+       "code": "medical_diet",
+       "nombre": "Seguir dieta por indicacion medica",
+       "descripcion": "Adaptar recomendaciones a instrucciones clinicas confirmadas."
+      }
+     ],
+     "conditions": [
+      {
+       "id": 11,
+       "code": "anemia",
+       "nombre": "Anemia",
+       "descripcion": "Condicion relacionada con niveles bajos de hemoglobina o hierro, segun diagnostico.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 3,
+       "code": "high_cholesterol",
+       "nombre": "Colesterol alto",
+       "descripcion": "Condicion que puede requerir control de grasa saturada y aumento de fibra.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 10,
+       "code": "ibs",
+       "nombre": "Colon irritable",
+       "descripcion": "Condicion digestiva con sensibilidad a grupos de alimentos o habitos.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 9,
+       "code": "gastritis",
+       "nombre": "Gastritis",
+       "descripcion": "Condicion digestiva que puede requerir evitar irritantes.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 7,
+       "code": "lactose_intolerance",
+       "nombre": "Intolerancia a lactosa",
+       "descripcion": "Dificultad para digerir lactosa presente en lacteos.",
+       "risk_level": "medium",
+       "requires_professional_guidance": false
+      },
+      {
+       "id": 13,
+       "code": "obesity",
+       "nombre": "Obesidad",
+       "descripcion": "Condicion que puede requerir objetivos personalizados de energia, calidad alimentaria y seguimiento.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 8,
+       "code": "food_allergies",
+       "nombre": "Alergias alimentarias",
+       "descripcion": "Alergias que requieren evitar ingredientes especificos.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 6,
+       "code": "celiac_disease",
+       "nombre": "Celiaquia",
+       "descripcion": "Condicion que requiere evitar gluten.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 1,
+       "code": "diabetes",
+       "nombre": "Diabetes",
+       "descripcion": "Condicion que requiere control de carbohidratos, azucar anadida y calidad de la dieta.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 12,
+       "code": "pregnancy",
+       "nombre": "Embarazo",
+       "descripcion": "Etapa que requiere necesidades nutricionales especificas y cuidado clinico.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 5,
+       "code": "heart_disease",
+       "nombre": "Enfermedad cardiaca",
+       "descripcion": "Condicion cardiovascular que requiere recomendaciones conservadoras y supervisadas.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 4,
+       "code": "kidney_disease",
+       "nombre": "Enfermedad renal",
+       "descripcion": "Condicion que puede requerir control de proteina, sodio, potasio, fosforo y liquidos.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 2,
+       "code": "hypertension",
+       "nombre": "Hipertension",
+       "descripcion": "Condicion relacionada con presion arterial elevada y control de sodio.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      }
+     ]
+    }
+   },
+   "GET /profile": {
+    "status": 200,
+    "body": {
+     "profile": null,
+     "goals": [],
+     "conditions": [],
+     "targets": null
+    }
+   },
+   "GET /users/restrictions": {
+    "status": 200,
+    "body": {
+     "restrictions": [
+      {
+       "restriccion_id": 1,
+       "nombre": "Gluten"
+      },
+      {
+       "restriccion_id": 2,
+       "nombre": "Lactosa"
+      },
+      {
+       "restriccion_id": 3,
+       "nombre": "Mariscos"
+      },
+      {
+       "restriccion_id": 4,
+       "nombre": "Frutos secos"
+      },
+      {
+       "restriccion_id": 5,
+       "nombre": "Huevo"
+      },
+      {
+       "restriccion_id": 6,
+       "nombre": "Pescado"
+      },
+      {
+       "restriccion_id": 7,
+       "nombre": "Soya"
+      }
+     ]
+    }
+   },
+   "GET /admin/overview": {
+    "status": 200,
+    "body": {
+     "generatedAt": "2026-11-14T14:03:10.448Z",
+     "counts": {
+      "users": 3,
+      "profiles": 1,
+      "profileCoveragePercent": 33,
+      "recipes": 16,
+      "ingredients": 37,
+      "restrictions": 7,
+      "activeGoals": 12,
+      "activeConditions": 13,
+      "activeRules": 8,
+      "unreadNotifications": 12
+     },
+     "catalogQuality": {
+      "nutritionCompleteRecipes": 16,
+      "nutritionCompletePercent": 100,
+      "nutritionReviewedRecipes": 16,
+      "nutritionReviewedPercent": 100,
+      "ingredientRelations": 90,
+      "quantifiedIngredientRelations": 90,
+      "quantifiedIngredientsPercent": 100,
+      "categorizedIngredients": 37,
+      "categorizedIngredientsPercent": 100,
+      "substitutionReadyIngredients": 36,
+      "substitutionReadyPercent": 97
+     },
+     "vision": {
+      "configured": false,
+      "provider": null,
+      "model": null,
+      "monthlyBudgetUsd": 5,
+      "committedUsd": 0,
+      "analyses": 0,
+      "succeeded": 0,
+      "failed": 0,
+      "pending": 0
+     },
+     "migrations": [
+      {
+       "version": "001",
+       "fileName": "001_clinical_profile_foundation.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.753Z"
+      },
+      {
+       "version": "002",
+       "fileName": "002_vision_usage_limits.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.763Z"
+      },
+      {
+       "version": "003",
+       "fileName": "003_medical_document_audit.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.778Z"
+      },
+      {
+       "version": "004",
+       "fileName": "004_medical_document_retention.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.782Z"
+      },
+      {
+       "version": "005",
+       "fileName": "005_account_deletion_cascades.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.788Z"
+      },
+      {
+       "version": "006",
+       "fileName": "006_in_app_notifications.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.800Z"
+      },
+      {
+       "version": "007",
+       "fileName": "007_notification_schedules.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.807Z"
+      },
+      {
+       "version": "008",
+       "fileName": "008_restriction_catalog_lifecycle.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.809Z"
+      },
+      {
+       "version": "009",
+       "fileName": "009_ingredient_food_groups.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.814Z"
+      },
+      {
+       "version": "010",
+       "fileName": "010_recipe_nutrition_provenance.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.821Z"
+      },
+      {
+       "version": "011",
+       "fileName": "011_recipe_catalog_imports.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.835Z"
+      },
+      {
+       "version": "012",
+       "fileName": "012_ingredient_substitution_groups.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.841Z"
+      },
+      {
+       "version": "013",
+       "fileName": "013_user_recipe_favorites.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.846Z"
+      },
+      {
+       "version": "014",
+       "fileName": "014_user_progress_tracking.sql",
+       "recorded": true,
+       "recordedAt": "2026-10-24T20:14:14.853Z"
+      }
+     ]
+    }
+   }
+  },
+  "nuevo": {
+   "GET /users/restrictions/19": {
+    "status": 200,
+    "body": {
+     "hasRestrictions": false,
+     "restrictions": []
+    }
+   },
+   "GET /profile": {
+    "status": 200,
+    "body": {
+     "profile": null,
+     "goals": [],
+     "conditions": [],
+     "targets": null
+    }
+   },
+   "GET /users/restrictions": {
+    "status": 200,
+    "body": {
+     "restrictions": [
+      {
+       "restriccion_id": 1,
+       "nombre": "Gluten"
+      },
+      {
+       "restriccion_id": 2,
+       "nombre": "Lactosa"
+      },
+      {
+       "restriccion_id": 3,
+       "nombre": "Mariscos"
+      },
+      {
+       "restriccion_id": 4,
+       "nombre": "Frutos secos"
+      },
+      {
+       "restriccion_id": 5,
+       "nombre": "Huevo"
+      },
+      {
+       "restriccion_id": 6,
+       "nombre": "Pescado"
+      },
+      {
+       "restriccion_id": 7,
+       "nombre": "Soya"
+      }
+     ]
+    }
+   },
+   "GET /profile/catalogs": {
+    "status": 200,
+    "body": {
+     "goals": [
+      {
+       "id": 9,
+       "code": "increase_energy",
+       "nombre": "Aumentar energia",
+       "descripcion": "Mejorar distribucion de comidas, hidratacion y calidad de nutrientes."
+      },
+      {
+       "id": 5,
+       "code": "control_glucose",
+       "nombre": "Controlar glucosa",
+       "descripcion": "Apoyar control de glucosa con calidad de carbohidratos, fibra y reduccion de azucar anadida."
+      },
+      {
+       "id": 7,
+       "code": "control_blood_pressure",
+       "nombre": "Controlar presion arterial",
+       "descripcion": "Reducir sodio y apoyar habitos alimentarios compatibles con control de presion arterial."
+      },
+      {
+       "id": 1,
+       "code": "gain_muscle",
+       "nombre": "Ganar masa muscular",
+       "descripcion": "Aumentar masa muscular con soporte de proteina, energia suficiente y habitos de entrenamiento."
+      },
+      {
+       "id": 12,
+       "code": "manage_allergies",
+       "nombre": "Manejar alergias o intolerancias",
+       "descripcion": "Evitar ingredientes incompatibles y sugerir alternativas seguras."
+      },
+      {
+       "id": 3,
+       "code": "maintain_weight",
+       "nombre": "Mantener peso",
+       "descripcion": "Mantener composicion corporal y habitos sostenibles."
+      },
+      {
+       "id": 8,
+       "code": "improve_digestion",
+       "nombre": "Mejorar digestion",
+       "descripcion": "Identificar tolerancias, mejorar fibra y reducir detonantes digestivos."
+      },
+      {
+       "id": 10,
+       "code": "sports_performance",
+       "nombre": "Mejorar rendimiento deportivo",
+       "descripcion": "Ajustar energia, proteina, carbohidratos e hidratacion segun actividad."
+      },
+      {
+       "id": 4,
+       "code": "general_health",
+       "nombre": "Mejorar salud general",
+       "descripcion": "Mejorar calidad alimentaria, variedad y equilibrio nutricional."
+      },
+      {
+       "id": 2,
+       "code": "lose_body_fat",
+       "nombre": "Perder grasa corporal",
+       "descripcion": "Reducir grasa corporal con control calorico, proteina suficiente y alimentos de alta saciedad."
+      },
+      {
+       "id": 6,
+       "code": "reduce_cholesterol",
+       "nombre": "Reducir colesterol",
+       "descripcion": "Priorizar fibra, grasas saludables y reduccion de grasa saturada."
+      },
+      {
+       "id": 11,
+       "code": "medical_diet",
+       "nombre": "Seguir dieta por indicacion medica",
+       "descripcion": "Adaptar recomendaciones a instrucciones clinicas confirmadas."
+      }
+     ],
+     "conditions": [
+      {
+       "id": 11,
+       "code": "anemia",
+       "nombre": "Anemia",
+       "descripcion": "Condicion relacionada con niveles bajos de hemoglobina o hierro, segun diagnostico.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 3,
+       "code": "high_cholesterol",
+       "nombre": "Colesterol alto",
+       "descripcion": "Condicion que puede requerir control de grasa saturada y aumento de fibra.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 10,
+       "code": "ibs",
+       "nombre": "Colon irritable",
+       "descripcion": "Condicion digestiva con sensibilidad a grupos de alimentos o habitos.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 9,
+       "code": "gastritis",
+       "nombre": "Gastritis",
+       "descripcion": "Condicion digestiva que puede requerir evitar irritantes.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 7,
+       "code": "lactose_intolerance",
+       "nombre": "Intolerancia a lactosa",
+       "descripcion": "Dificultad para digerir lactosa presente en lacteos.",
+       "risk_level": "medium",
+       "requires_professional_guidance": false
+      },
+      {
+       "id": 13,
+       "code": "obesity",
+       "nombre": "Obesidad",
+       "descripcion": "Condicion que puede requerir objetivos personalizados de energia, calidad alimentaria y seguimiento.",
+       "risk_level": "medium",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 8,
+       "code": "food_allergies",
+       "nombre": "Alergias alimentarias",
+       "descripcion": "Alergias que requieren evitar ingredientes especificos.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 6,
+       "code": "celiac_disease",
+       "nombre": "Celiaquia",
+       "descripcion": "Condicion que requiere evitar gluten.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 1,
+       "code": "diabetes",
+       "nombre": "Diabetes",
+       "descripcion": "Condicion que requiere control de carbohidratos, azucar anadida y calidad de la dieta.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 12,
+       "code": "pregnancy",
+       "nombre": "Embarazo",
+       "descripcion": "Etapa que requiere necesidades nutricionales especificas y cuidado clinico.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 5,
+       "code": "heart_disease",
+       "nombre": "Enfermedad cardiaca",
+       "descripcion": "Condicion cardiovascular que requiere recomendaciones conservadoras y supervisadas.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 4,
+       "code": "kidney_disease",
+       "nombre": "Enfermedad renal",
+       "descripcion": "Condicion que puede requerir control de proteina, sodio, potasio, fosforo y liquidos.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      },
+      {
+       "id": 2,
+       "code": "hypertension",
+       "nombre": "Hipertension",
+       "descripcion": "Condicion relacionada con presion arterial elevada y control de sodio.",
+       "risk_level": "high",
+       "requires_professional_guidance": true
+      }
+     ]
+    }
+   }
+  }
+ },
+ "plantillas": {
+  "recetasSeguras": [
+   {
+    "id": 16,
+    "nombre": "Crema de zanahoria",
+    "descripcion": "Crema de zanahoria y papa con cebolla, sin lácteos.",
+    "calorias": 223,
+    "tiempo_preparacion": 30,
+    "nivel_salud": 5,
+    "protein_g": "4.30",
+    "carbs_g": "40.90",
+    "fat_g": "5.50",
+    "saturated_fat_g": "0.70",
+    "sugar_g": "12.30",
+    "fiber_g": "8.70",
+    "sodium_mg": "727.50",
+    "serving_size_g": "356.50",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 15,
+    "nombre": "Ensalada de garbanzos y atún",
+    "descripcion": "Garbanzos, atún, tomate, cebolla y limón.",
+    "calorias": 427,
+    "tiempo_preparacion": 15,
+    "nivel_salud": 5,
+    "protein_g": "37.00",
+    "carbs_g": "48.40",
+    "fat_g": "10.20",
+    "saturated_fat_g": "1.40",
+    "sugar_g": "10.90",
+    "fiber_g": "13.30",
+    "sodium_mg": "441.30",
+    "serving_size_g": "361.00",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 6,
+    "nombre": "Lentejas guisadas",
+    "descripcion": "Lentejas con zanahoria, tomate y cebolla, acompañadas de arroz integral.",
+    "calorias": 446,
+    "tiempo_preparacion": 45,
+    "nivel_salud": 5,
+    "protein_g": "22.10",
+    "carbs_g": "76.50",
+    "fat_g": "7.10",
+    "saturated_fat_g": "1.20",
+    "sugar_g": "9.40",
+    "fiber_g": "20.20",
+    "sodium_mg": "628.60",
+    "serving_size_g": "456.50",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 2,
+    "nombre": "Bowl de quinoa con garbanzos",
+    "descripcion": "Quinoa con garbanzos, tomate, espinaca y aguacate; alto en fibra y proteína vegetal.",
+    "calorias": 492,
+    "tiempo_preparacion": 25,
+    "nivel_salud": 5,
+    "protein_g": "18.40",
+    "carbs_g": "68.20",
+    "fat_g": "18.10",
+    "saturated_fat_g": "2.40",
+    "sugar_g": "8.70",
+    "fiber_g": "17.00",
+    "sodium_mg": "444.30",
+    "serving_size_g": "426.00",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 1,
+    "nombre": "Pollo con arroz integral y brócoli",
+    "descripcion": "Pechuga de pollo a la plancha con arroz integral, brócoli al vapor y un toque de limón.",
+    "calorias": 513,
+    "tiempo_preparacion": 35,
+    "nivel_salud": 5,
+    "protein_g": "53.50",
+    "carbs_g": "45.90",
+    "fat_g": "12.30",
+    "saturated_fat_g": "2.60",
+    "sugar_g": "2.20",
+    "fiber_g": "5.30",
+    "sodium_mg": "537.90",
+    "serving_size_g": "416.00",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 5,
+    "nombre": "Tortilla de espinaca",
+    "descripcion": "Huevos batidos con espinaca y cebolla, servidos con tomate.",
+    "calorias": 252,
+    "tiempo_preparacion": 15,
+    "nivel_salud": 4,
+    "protein_g": "17.70",
+    "carbs_g": "8.10",
+    "fat_g": "16.80",
+    "saturated_fat_g": "4.50",
+    "sugar_g": "3.50",
+    "fiber_g": "2.50",
+    "sodium_mg": "609.70",
+    "serving_size_g": "276.00",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 9,
+    "nombre": "Tacos de frijol y aguacate",
+    "descripcion": "Tortillas de maíz con frijoles negros, aguacate, lechuga y tomate.",
+    "calorias": 504,
+    "tiempo_preparacion": 20,
+    "nivel_salud": 4,
+    "protein_g": "20.60",
+    "carbs_g": "83.60",
+    "fat_g": "12.30",
+    "saturated_fat_g": "1.80",
+    "sugar_g": "3.20",
+    "fiber_g": "23.70",
+    "sodium_mg": "444.70",
+    "serving_size_g": "381.00",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 3,
+    "nombre": "Salmón al horno con papa",
+    "descripcion": "Filete de salmón horneado con papa cocida y ensalada fresca.",
+    "calorias": 527,
+    "tiempo_preparacion": 40,
+    "nivel_salud": 4,
+    "protein_g": "35.20",
+    "carbs_g": "37.40",
+    "fat_g": "24.90",
+    "saturated_fat_g": "5.40",
+    "sugar_g": "3.30",
+    "fiber_g": "5.70",
+    "sodium_mg": "504.70",
+    "serving_size_g": "456.00",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 10,
+    "nombre": "Camarones al ajillo con arroz",
+    "descripcion": "Camarones salteados con cebolla y limón, acompañados de arroz integral.",
+    "calorias": 442,
+    "tiempo_preparacion": 25,
+    "nivel_salud": 3,
+    "protein_g": "40.70",
+    "carbs_g": "43.80",
+    "fat_g": "12.00",
+    "saturated_fat_g": "2.00",
+    "sugar_g": "2.40",
+    "fiber_g": "3.50",
+    "sodium_mg": "756.00",
+    "serving_size_g": "366.50",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   },
+   {
+    "id": 13,
+    "nombre": "Carne de res con papa y ensalada",
+    "descripcion": "Carne de res a la plancha con papa al horno y ensalada.",
+    "calorias": 576,
+    "tiempo_preparacion": 35,
+    "nivel_salud": 3,
+    "protein_g": "43.80",
+    "carbs_g": "34.40",
+    "fat_g": "27.90",
+    "saturated_fat_g": "9.70",
+    "sugar_g": "3.40",
+    "fiber_g": "5.30",
+    "sodium_mg": "717.30",
+    "serving_size_g": "446.50",
+    "servings": "1.00",
+    "nutrition_source": "calculated",
+    "nutrition_reviewed_at": "2026-10-24T20:15:56.979Z",
+    "external_key": null,
+    "nutrition_source_reference": "Calculado a partir de los ingredientes",
+    "nutrition_reviewed_by": null
+   }
+  ],
+  "listaComprasLlena": {
+   "items": [
+    {
+     "id": 8,
+     "nombre": "arroz integral",
+     "foodGroup": "carbohydrate",
+     "knownAmountG": 150,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Pollo con arroz integral y brócoli"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 29,
+     "nombre": "aceite de oliva",
+     "foodGroup": "fat",
+     "knownAmountG": 10,
+     "plannedUses": 2,
+     "missingQuantityUses": 0,
+     "recipeCount": 2,
+     "sourceRecipes": [
+      "Pollo con arroz integral y brócoli",
+      "Tortilla de espinaca"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 24,
+     "nombre": "limon",
+     "foodGroup": "fruit",
+     "knownAmountG": 10,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Pollo con arroz integral y brócoli"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 2,
+     "nombre": "huevo",
+     "foodGroup": "protein",
+     "knownAmountG": 120,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Tortilla de espinaca"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 1,
+     "nombre": "pechuga de pollo",
+     "foodGroup": "protein",
+     "knownAmountG": 150,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Pollo con arroz integral y brócoli"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 36,
+     "nombre": "sal",
+     "foodGroup": "seasoning",
+     "knownAmountG": 2,
+     "plannedUses": 2,
+     "missingQuantityUses": 0,
+     "recipeCount": 2,
+     "sourceRecipes": [
+      "Pollo con arroz integral y brócoli",
+      "Tortilla de espinaca"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 15,
+     "nombre": "brocoli",
+     "foodGroup": "vegetable",
+     "knownAmountG": 100,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Pollo con arroz integral y brócoli"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 19,
+     "nombre": "cebolla",
+     "foodGroup": "vegetable",
+     "knownAmountG": 30,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Tortilla de espinaca"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 16,
+     "nombre": "espinaca",
+     "foodGroup": "vegetable",
+     "knownAmountG": 60,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Tortilla de espinaca"
+     ],
+     "quantities": []
+    },
+    {
+     "id": 17,
+     "nombre": "tomate",
+     "foodGroup": "vegetable",
+     "knownAmountG": 60,
+     "plannedUses": 1,
+     "missingQuantityUses": 0,
+     "recipeCount": 1,
+     "sourceRecipes": [
+      "Tortilla de espinaca"
+     ],
+     "quantities": []
+    }
+   ],
+   "planSignature": "2f3c4a35e0afef7758ed6588111d6331",
+   "plannedMeals": 2,
+   "missingQuantityItems": 0
+  },
+  "listaComprasVacia": {
+   "items": [],
+   "planSignature": "d41d8cd98f00b204e9800998ecf8427e",
+   "plannedMeals": 0,
+   "missingQuantityItems": 0
+  },
+  "planGuardado": {
+   "message": "Plan semanal guardado correctamente"
+  },
+  "correoDuplicado": {
+   "message": "El correo ya está registrado"
+  }
+ }
+}

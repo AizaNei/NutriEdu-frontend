@@ -1,0 +1,245 @@
+[
+  {
+    "id": "CP-001",
+    "criterio": "HU-01: con datos válidos se crea la cuenta.",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-001 Registro con datos válidos",
+    "titulo": "Registro con datos válidos",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-002",
+    "criterio": "HU-01: si el correo ya está registrado, se muestra un error y no se crea otra cuenta.",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-002 Registro con correo duplicado",
+    "titulo": "Registro con correo duplicado",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-003",
+    "criterio": "HU-01: nombre, correo y contraseña son obligatorios.",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-003 Registro con campos vacíos",
+    "titulo": "Registro con campos vacíos",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-004",
+    "criterio": "HU-01: política de contraseña, mínimo 10 caracteres (9 = límite - 1).",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-004 Contraseña de 9 caracteres (valor límite)",
+    "titulo": "Registro con contraseña de 9 caracteres (valor límite inferior - 1)",
+    "tipo": "Valor límite",
+    "bug": null
+  },
+  {
+    "id": "CP-005",
+    "criterio": "HU-01: el correo debe tener un formato válido.",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-005 Registro con correo de formato inválido",
+    "titulo": "Registro con correo de formato inválido",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-007",
+    "criterio": "HU-02: con credenciales correctas se permite el acceso y se genera un token JWT.",
+    "archivo": "cypress/e2e/login.cy.js",
+    "script": "CP-007 Login con credenciales correctas",
+    "titulo": "Login con credenciales correctas",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-008",
+    "criterio": "HU-02: con contraseña incorrecta se muestra un error sin indicar cuál campo falló.",
+    "archivo": "cypress/e2e/login.cy.js",
+    "script": "CP-008 Login con contraseña incorrecta",
+    "titulo": "Login con contraseña incorrecta",
+    "tipo": "Negativo",
+    "bug": "BUG-03"
+  },
+  {
+    "id": "CP-009",
+    "criterio": "HU-02: los campos obligatorios no pueden quedar vacíos.",
+    "archivo": "cypress/e2e/login.cy.js",
+    "script": "CP-009 Login con campos vacíos",
+    "titulo": "Login con campos vacíos",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-010",
+    "criterio": "HU-02: las rutas privadas rechazan accesos sin sesión.",
+    "archivo": "cypress/e2e/login.cy.js",
+    "script": "CP-010 Acceso a ruta privada sin sesión",
+    "titulo": "Acceso a ruta privada sin token",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-022",
+    "criterio": "HU-07: toda receta con un ingrediente restringido se excluye del listado.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-022 Receta con ingrediente restringido se excluye",
+    "titulo": "Receta con ingrediente restringido se excluye",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-023",
+    "criterio": "HU-07: las recetas sin ingredientes restringidos se muestran.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-023 Receta segura se muestra",
+    "titulo": "Receta segura se muestra",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-025",
+    "criterio": "HU-07: si ninguna receta es compatible, se muestra un estado vacío con mensaje claro.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-025 Estado vacío cuando ninguna receta es compatible",
+    "titulo": "Estado vacío cuando ninguna receta es compatible",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-030",
+    "criterio": "HU-09: el detalle muestra nombre, descripción, calorías, tiempo, nivel de salud e ingredientes.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-030 Detalle de receta segura",
+    "titulo": "Detalle de receta segura",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-031",
+    "criterio": "HU-09: si hay ingredientes no seguros, se muestra una advertencia con sustitutos.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-031 Advertencia de ingrediente no seguro",
+    "titulo": "Advertencia de ingrediente no seguro",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-032",
+    "criterio": "HU-09: si el ID de receta no existe, se muestra un mensaje de error.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-032 Receta inexistente",
+    "titulo": "Receta inexistente",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-033",
+    "criterio": "HU-10: la búsqueda devuelve coincidencias sin distinguir mayúsculas.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-033 Búsqueda con coincidencias",
+    "titulo": "Búsqueda con coincidencias",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-034",
+    "criterio": "HU-10: la búsqueda devuelve solo recetas compatibles con el perfil.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-034 Búsqueda no devuelve recetas restringidas",
+    "titulo": "Búsqueda no devuelve recetas restringidas",
+    "tipo": "Negativo",
+    "bug": "BUG-01"
+  },
+  {
+    "id": "CP-045",
+    "criterio": "HU-15: al guardar, el plan queda almacenado y se recupera al volver.",
+    "archivo": "cypress/e2e/planificador.cy.js",
+    "script": "CP-045 Guardar plan semanal",
+    "titulo": "Guardar plan semanal",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-046",
+    "criterio": "HU-15: al reemplazar un plan existente se pide confirmación.",
+    "archivo": "cypress/e2e/planificador.cy.js",
+    "script": "CP-046 Confirmación al reemplazar el plan",
+    "titulo": "Confirmación al reemplazar el plan",
+    "tipo": "Positivo",
+    "bug": "BUG-02"
+  },
+  {
+    "id": "CP-047",
+    "criterio": "HU-15: solo se pueden asignar recetas compatibles con el perfil.",
+    "archivo": "cypress/e2e/planificador.cy.js",
+    "script": "CP-047 El planificador no ofrece recetas no seguras",
+    "titulo": "El planificador no ofrece recetas no seguras",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-049",
+    "criterio": "HU-16: si el plan está vacío, se informa que no hay ingredientes.",
+    "archivo": "cypress/e2e/planificador.cy.js",
+    "script": "CP-049 Lista de compras con plan vacío",
+    "titulo": "Lista de compras con plan vacío",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-051",
+    "criterio": "HU-17: solo el rol administrador accede al panel.",
+    "archivo": "cypress/e2e/autorizacion-y-movil.cy.js",
+    "script": "CP-051 Usuario normal no accede al panel",
+    "titulo": "Usuario normal no accede al panel",
+    "tipo": "Negativo",
+    "bug": null
+  },
+  {
+    "id": "CP-056",
+    "criterio": "HU-19: la interfaz se adapta a pantallas de móvil.",
+    "archivo": "cypress/e2e/autorizacion-y-movil.cy.js",
+    "script": "CP-056 Uso en pantalla de móvil",
+    "titulo": "Uso en pantalla de móvil",
+    "tipo": "Positivo",
+    "bug": null
+  },
+  {
+    "id": "CP-058",
+    "criterio": "HU-01: política de contraseña, mínimo 10 caracteres (10 = límite).",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-058 Contraseña de exactamente 10 caracteres (valor límite)",
+    "titulo": "Registro con contraseña de exactamente 10 caracteres (valor límite inferior)",
+    "tipo": "Valor límite",
+    "bug": null
+  },
+  {
+    "id": "CP-059",
+    "criterio": "HU-01: política de contraseña, máximo 72 caracteres (72 = límite).",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-059 Contraseña de exactamente 72 caracteres (valor límite)",
+    "titulo": "Registro con contraseña de exactamente 72 caracteres (valor límite superior)",
+    "tipo": "Valor límite",
+    "bug": null
+  },
+  {
+    "id": "CP-060",
+    "criterio": "HU-01: política de contraseña, máximo 72 caracteres (73 = límite + 1, el campo no lo acepta).",
+    "archivo": "cypress/e2e/registro.cy.js",
+    "script": "CP-060 Contraseña de 73 caracteres (valor límite)",
+    "titulo": "Registro con contraseña de 73 caracteres (valor límite superior + 1)",
+    "tipo": "Valor límite",
+    "bug": null
+  },
+  {
+    "id": "CP-061",
+    "criterio": "HU-10: si no hay coincidencias, se muestra un estado vacío.",
+    "archivo": "cypress/e2e/recetas.cy.js",
+    "script": "CP-061 Búsqueda sin coincidencias",
+    "titulo": "Búsqueda sin coincidencias",
+    "tipo": "Negativo",
+    "bug": null
+  }
+]

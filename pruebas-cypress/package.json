@@ -1,0 +1,15 @@
+{
+  "name": "nutriedu-pruebas-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automatización con Cypress del plan de pruebas corregido de NutriEdu",
+  "scripts": {
+    "cy:open": "cypress open --e2e --browser chrome",
+    "pruebas": "node scripts/ejecutar.js",
+    "pruebas:chrome": "node scripts/ejecutar.js --browser chrome",
+    "reporte": "node scripts/generar-reporte.js"
+  },
+  "devDependencies": {
+    "cypress": "^16.3.0"
+  }
+}

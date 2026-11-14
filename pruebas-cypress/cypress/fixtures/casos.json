@@ -1,0 +1,265 @@
+{
+  "CP-001": {
+    "caso": "Registro con datos válidos",
+    "tipo": "Positivo",
+    "historia": "HU-01",
+    "nombre": "Ana Pérez",
+    "correo": "prueba1@correo.com",
+    "password": "Clave#Segura2026",
+    "mensaje": "Usuario registrado correctamente",
+    "ruta": "/login"
+  },
+  "CP-002": {
+    "caso": "Registro con correo duplicado",
+    "tipo": "Negativo",
+    "historia": "HU-01",
+    "nombre": "Ana Pérez",
+    "correo": "laura@nutriedu.test",
+    "password": "Clave#Segura2026",
+    "mensaje": "El correo ya está registrado",
+    "ruta": "/register"
+  },
+  "CP-003": {
+    "caso": "Registro con campos vacíos",
+    "tipo": "Negativo",
+    "historia": "HU-01",
+    "ruta": "/register"
+  },
+  "CP-004": {
+    "caso": "Registro con contraseña de 9 caracteres (valor límite inferior - 1)",
+    "tipo": "Valor límite",
+    "historia": "HU-01",
+    "nombre": "Ana Pérez",
+    "correo": "prueba2@correo.com",
+    "password": "Clave#123",
+    "requisito": "Al menos 10 caracteres",
+    "mensaje": "Tu contraseña debe incluir:"
+  },
+  "CP-005": {
+    "caso": "Registro con correo de formato inválido",
+    "tipo": "Negativo",
+    "historia": "HU-01",
+    "nombre": "Ana Pérez",
+    "correo": "anacorreo.com",
+    "password": "Clave#Segura2026",
+    "ruta": "/register"
+  },
+  "CP-007": {
+    "caso": "Login con credenciales correctas",
+    "tipo": "Positivo",
+    "historia": "HU-02",
+    "correo": "laura@nutriedu.test",
+    "password": "Nutri#Edu2026",
+    "ruta": "/recipes",
+    "titulo": "Recetas"
+  },
+  "CP-008": {
+    "caso": "Login con contraseña incorrecta",
+    "tipo": "Negativo",
+    "historia": "HU-02",
+    "correo": "laura@nutriedu.test",
+    "password": "Incorrecta9",
+    "ruta": "/login",
+    "mensajesQueRevelanCampo": [
+      "Contraseña incorrecta",
+      "Usuario no encontrado"
+    ]
+  },
+  "CP-009": {
+    "caso": "Login con campos vacíos",
+    "tipo": "Negativo",
+    "historia": "HU-02",
+    "ruta": "/login"
+  },
+  "CP-010": {
+    "caso": "Acceso a ruta privada sin token",
+    "tipo": "Negativo",
+    "historia": "HU-02",
+    "rutaPrivada": "/planner",
+    "ruta": "/login"
+  },
+  "CP-022": {
+    "caso": "Receta con ingrediente restringido se excluye",
+    "tipo": "Positivo",
+    "historia": "HU-07",
+    "recetaNoSegura": "Avena con fresas y chía",
+    "seccion": "Recetas seguras"
+  },
+  "CP-023": {
+    "caso": "Receta segura se muestra",
+    "tipo": "Positivo",
+    "historia": "HU-07",
+    "recetaSegura": "Crema de zanahoria",
+    "etiqueta": "Segura para ti",
+    "seccion": "Recetas seguras"
+  },
+  "CP-025": {
+    "caso": "Estado vacío cuando ninguna receta es compatible",
+    "tipo": "Negativo",
+    "historia": "HU-07",
+    "titulo": "No hay recetas seguras",
+    "descripcion": "Revisa tus restricciones o vuelve a intentarlo más tarde."
+  },
+  "CP-030": {
+    "caso": "Detalle de receta segura",
+    "tipo": "Positivo",
+    "historia": "HU-09",
+    "receta": "Crema de zanahoria",
+    "descripcion": "Crema de zanahoria y papa con cebolla, sin lácteos.",
+    "calorias": "223 kcal",
+    "preparacion": "30 min",
+    "nivel": "5/5",
+    "aviso": "Compatible con tus restricciones"
+  },
+  "CP-031": {
+    "caso": "Advertencia de ingrediente no seguro",
+    "tipo": "Positivo",
+    "historia": "HU-09",
+    "id": 4,
+    "receta": "Avena con fresas y chía",
+    "aviso": "2 ingredientes requieren revisión",
+    "ingredientes": "avena, leche",
+    "boton": "Ver alternativas",
+    "ventana": "Alternativas de ingredientes"
+  },
+  "CP-032": {
+    "caso": "Receta inexistente",
+    "tipo": "Negativo",
+    "historia": "HU-09",
+    "id": 99999,
+    "mensaje": "Receta no encontrada",
+    "boton": "Volver a recetas"
+  },
+  "CP-033": {
+    "caso": "Búsqueda con coincidencias",
+    "tipo": "Positivo",
+    "historia": "HU-10",
+    "texto": "ENSALADA",
+    "receta": "Ensalada de garbanzos y atún"
+  },
+  "CP-034": {
+    "caso": "Búsqueda no devuelve recetas restringidas",
+    "tipo": "Negativo",
+    "historia": "HU-10",
+    "texto": "avena",
+    "recetasRestringidas": [
+      "Avena con fresas y chía",
+      "Batido de banano y bebida de almendra"
+    ],
+    "vacio": "Sin coincidencias"
+  },
+  "CP-045": {
+    "caso": "Guardar plan semanal",
+    "tipo": "Positivo",
+    "historia": "HU-15",
+    "comidas": [
+      {
+        "receta": "Tortilla de espinaca",
+        "dia": "Lunes",
+        "comida": "Desayuno"
+      },
+      {
+        "receta": "Pollo con arroz integral y brócoli",
+        "dia": "Martes",
+        "comida": "Almuerzo"
+      }
+    ],
+    "mensaje": "Plan semanal guardado correctamente.",
+    "boton": "Plan guardado"
+  },
+  "CP-046": {
+    "caso": "Confirmación al reemplazar el plan",
+    "tipo": "Positivo",
+    "historia": "HU-15",
+    "planExistente": [
+      {
+        "recetaId": 5,
+        "diaSemana": "Lunes",
+        "tipoComida": "Desayuno"
+      }
+    ],
+    "nueva": {
+      "receta": "Crema de zanahoria",
+      "dia": "Miércoles",
+      "comida": "Cena"
+    }
+  },
+  "CP-047": {
+    "caso": "El planificador no ofrece recetas no seguras",
+    "tipo": "Negativo",
+    "historia": "HU-15",
+    "recetaNoSegura": "Avena con fresas y chía",
+    "recetaSegura": "Crema de zanahoria"
+  },
+  "CP-049": {
+    "caso": "Lista de compras con plan vacío",
+    "tipo": "Negativo",
+    "historia": "HU-16",
+    "titulo": "Tu lista está vacía",
+    "descripcion": "Guarda al menos una receta en el plan semanal para reunir sus ingredientes aquí."
+  },
+  "CP-051": {
+    "caso": "Usuario normal no accede al panel",
+    "tipo": "Negativo",
+    "historia": "HU-17",
+    "ruta": "/admin/recipes",
+    "redireccion": "/profile"
+  },
+  "CP-056": {
+    "caso": "Uso en pantalla de móvil",
+    "tipo": "Positivo",
+    "historia": "HU-19",
+    "ancho": 390,
+    "alto": 844,
+    "paginas": [
+      {
+        "ruta": "/recipes",
+        "titulo": "Recetas"
+      },
+      {
+        "ruta": "/planner",
+        "titulo": "Planificador semanal"
+      },
+      {
+        "ruta": "/profile",
+        "titulo": "Perfil de salud"
+      }
+    ]
+  },
+  "CP-058": {
+    "caso": "Registro con contraseña de exactamente 10 caracteres (valor límite inferior)",
+    "tipo": "Valor límite",
+    "historia": "HU-01",
+    "nombre": "Ana Pérez",
+    "correo": "prueba3@correo.com",
+    "password": "Clave#1234",
+    "mensaje": "La contraseña cumple todos los requisitos."
+  },
+  "CP-059": {
+    "caso": "Registro con contraseña de exactamente 72 caracteres (valor límite superior)",
+    "tipo": "Valor límite",
+    "historia": "HU-01",
+    "nombre": "Ana Pérez",
+    "correo": "prueba4@correo.com",
+    "password": "Clave#2026aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "mensaje": "La contraseña cumple todos los requisitos."
+  },
+  "CP-060": {
+    "caso": "Registro con contraseña de 73 caracteres (valor límite superior + 1)",
+    "tipo": "Valor límite",
+    "historia": "HU-01",
+    "nombre": "Ana Pérez",
+    "correo": "prueba5@correo.com",
+    "password": "Clave#2026aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+    "requisito": "Máximo 72 caracteres",
+    "longitudMaxima": 72
+  },
+  "CP-061": {
+    "caso": "Búsqueda sin coincidencias",
+    "tipo": "Negativo",
+    "historia": "HU-10",
+    "texto": "pizza",
+    "vacio": "Sin coincidencias",
+    "boton": "Limpiar filtros"
+  }
+}
