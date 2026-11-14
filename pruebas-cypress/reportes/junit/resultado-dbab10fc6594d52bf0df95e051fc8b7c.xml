@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="13.252" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-14T19:23:17" tests="0" file="cypress\e2e\registro.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="HU-01 · Registro" timestamp="2026-11-14T19:23:17" tests="8" time="13.250" failures="0">
+    <testcase name="HU-01 · Registro CP-001 Registro con datos válidos" time="3.148" classname="CP-001 Registro con datos válidos">
+    </testcase>
+    <testcase name="HU-01 · Registro CP-002 Registro con correo duplicado" time="1.648" classname="CP-002 Registro con correo duplicado">
+    </testcase>
+    <testcase name="HU-01 · Registro CP-003 Registro con campos vacíos" time="0.356" classname="CP-003 Registro con campos vacíos">
+    </testcase>
+    <testcase name="HU-01 · Registro CP-004 Contraseña de 9 caracteres (valor límite)" time="1.343" classname="CP-004 Contraseña de 9 caracteres (valor límite)">
+    </testcase>
+    <testcase name="HU-01 · Registro CP-058 Contraseña de exactamente 10 caracteres (valor límite)" time="1.312" classname="CP-058 Contraseña de exactamente 10 caracteres (valor límite)">
+    </testcase>
+    <testcase name="HU-01 · Registro CP-059 Contraseña de exactamente 72 caracteres (valor límite)" time="1.972" classname="CP-059 Contraseña de exactamente 72 caracteres (valor límite)">
+    </testcase>
+    <testcase name="HU-01 · Registro CP-060 Contraseña de 73 caracteres (valor límite)" time="1.716" classname="CP-060 Contraseña de 73 caracteres (valor límite)">
+    </testcase>
+    <testcase name="HU-01 · Registro CP-005 Registro con correo de formato inválido" time="1.405" classname="CP-005 Registro con correo de formato inválido">
+    </testcase>
+  </testsuite>
+</testsuites>
